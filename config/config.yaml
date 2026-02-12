@@ -1,0 +1,10 @@
+automation:
+  enabled: true
+  log_level: INFO
+  max_retries: 3
+
+scheduler:
+  check_interval: 60
+
+tasks:
+  default_timeout: 300
