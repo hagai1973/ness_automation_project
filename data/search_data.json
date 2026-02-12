@@ -1,0 +1,21 @@
+{
+  "base_url": "https://automationexercise.com",
+  "test_scenarios": [
+    {
+      "test_name": "search_tshirt_under_budget",
+      "search_query": "tshirt",
+      "max_price": 500,
+      "items_limit": 5
+    },
+    {
+      "test_name": "search_dress_under_budget",
+      "search_query": "dress",
+      "max_price": 1000,
+      "items_limit": 3
+    }
+  ],
+  "user_credentials": {
+    "email": "hagai.tregerman@gmail.com",
+    "password": "KMsuTYNyY@Q5y"
+  }
+}
