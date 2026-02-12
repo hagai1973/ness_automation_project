@@ -91,6 +91,8 @@ class Scheduler:
 
     def run_once(self) -> None:
         """Check and run any due tasks once."""
+        tasks_to_remove = []
+        
         for scheduled_task in self.scheduled_tasks:
             if scheduled_task.should_run():
                 try:
@@ -98,9 +100,13 @@ class Scheduler:
                     scheduled_task.last_run = datetime.now()
 
                     if not scheduled_task.repeat:
-                        self.scheduled_tasks.remove(scheduled_task)
+                        tasks_to_remove.append(scheduled_task)
                 except Exception as e:
                     logger.error(f"Error executing scheduled task: {e}")
+        
+        # Remove completed non-repeating tasks
+        for task in tasks_to_remove:
+            self.scheduled_tasks.remove(task)
 
     def run(self) -> None:
         """Run the scheduler continuously."""
