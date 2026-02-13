@@ -23,15 +23,15 @@ class TestLogin:
     @allure.severity(allure.severity_level.BLOCKER)
     @pytest.mark.smoke
     @pytest.mark.regression
-    def test_successful_login(self, page, test_data):
+    def test_successful_login(self, page, user_credentials):
         """Test: Successful login with valid credentials"""
         logger.info(f"\n{'#'*60}")
         logger.info(f"🔐 TEST: Successful Login")
         logger.info(f"{'#'*60}")
         
-        # Get credentials from test data
-        email = test_data['user_credentials']['email']
-        password = test_data['user_credentials']['password']
+        # Get credentials from .env
+        email = user_credentials['email']
+        password = user_credentials['password']
         
         with allure.step("Navigate to login page"):
             home_page = HomePage(page)
@@ -79,14 +79,14 @@ class TestLogin:
     @allure.description("Test that user can successfully logout after logging in")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.regression
-    def test_logout(self, page, test_data):
+    def test_logout(self, page, user_credentials):
         """Test: Logout functionality"""
         logger.info(f"\n{'#'*60}")
         logger.info(f"🚪 TEST: Logout Functionality")
         logger.info(f"{'#'*60}")
         
-        email = test_data['user_credentials']['email']
-        password = test_data['user_credentials']['password']
+        email = user_credentials['email']
+        password = user_credentials['password']
         
         with allure.step("Login first"):
             login_page = LoginPage(page)

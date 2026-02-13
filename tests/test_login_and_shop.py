@@ -34,7 +34,7 @@ class TestLoginAndShop:
     @allure.tag("E2E", "Regression", "Authenticated", "Critical Path")
     @pytest.mark.e2e
     @pytest.mark.regression
-    def test_login_search_add_verify(self, page, test_data, ensure_empty_cart):
+    def test_login_search_add_verify(self, page, test_data, user_credentials, ensure_empty_cart):
         """
         Complete E2E Test with Login
         
@@ -49,8 +49,8 @@ class TestLoginAndShop:
         logger.info(f"{'#'*60}")
         
         # Get test data
-        email = test_data['user_credentials']['email']
-        password = test_data['user_credentials']['password']
+        email = user_credentials['email']
+        password = user_credentials['password']
         scenario = test_data['test_scenarios'][0]
         
         # Attach test data to report

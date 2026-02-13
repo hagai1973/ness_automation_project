@@ -10,6 +10,10 @@ import logging
 import os
 import allure
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 # Configure logging
@@ -68,6 +72,25 @@ def base_url(test_data):
     url = test_data.get('base_url', 'https://automationexercise.com')
     logger.info(f"🌐 Base URL: {url}")
     return url
+
+
+@pytest.fixture(scope="session")
+def user_credentials():
+    """
+    Load user credentials from .env file
+    Scope: session
+    """
+    email = os.getenv('USER_EMAIL')
+    password = os.getenv('USER_PASSWORD')
+    
+    if not email or not password:
+        raise ValueError(
+            "❌ USER_EMAIL and USER_PASSWORD must be set in .env file.\n"
+            "   Copy .env.example to .env and fill in your credentials."
+        )
+    
+    logger.info(f"🔐 Credentials loaded from .env for: {email}")
+    return {'email': email, 'password': password}
 
 
 # ============================================================================
@@ -192,7 +215,7 @@ def pytest_runtest_makereport(item, call):
 # ============================================================================
 
 @pytest.fixture(scope="function")
-def ensure_empty_cart(page, test_data):
+def ensure_empty_cart(page, user_credentials):
     """
     Ensure the cart is empty before the test runs.
     Logs in first, then navigates to cart, removes all items if any exist,
@@ -210,8 +233,8 @@ def ensure_empty_cart(page, test_data):
     home_page.go_to_login()
 
     login_page = LoginPage(page)
-    email = test_data['user_credentials']['email']
-    password = test_data['user_credentials']['password']
+    email = user_credentials['email']
+    password = user_credentials['password']
     login_page.login(email, password)
     logger.info("✅ Logged in for cart cleanup")
 
