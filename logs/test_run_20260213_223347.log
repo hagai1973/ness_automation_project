@@ -1,0 +1,80 @@
+2026-02-13 22:33:47,790 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 22:33:47,791 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 22:33:47,792 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 22:33:47,793 - conftest - INFO - 
+================================================================================
+2026-02-13 22:33:47,793 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:33:47,793 - conftest - INFO - ================================================================================
+2026-02-13 22:33:47,798 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:33:49,868 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:33:49,869 - conftest - INFO - 🔐 Logging in before cart cleanup...
+2026-02-13 22:33:49,871 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:33:54,168 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:33:54,169 - pages.base_page - INFO - 🔐 Clicking Login link
+2026-02-13 22:33:54,170 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 22:33:54,221 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/login"]
+2026-02-13 22:33:54,868 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:33:54,868 - pages.base_page - INFO - 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 22:33:54,868 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 22:33:54,869 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:33:54,897 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:33:55,226 - pages.base_page - INFO - ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 22:33:55,227 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 22:33:55,227 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:33:55,243 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:33:55,560 - pages.base_page - INFO - ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 22:33:55,716 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771014835.png
+2026-02-13 22:33:55,718 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 22:33:55,718 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:33:55,740 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:33:56,769 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:33:58,771 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:33:58,819 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:33:58,820 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:33:58,820 - pages.base_page - INFO - ✅ Login successful!
+2026-02-13 22:33:59,017 - pages.base_page - INFO - 📸 Screenshot saved: after_login_1771014835.png
+2026-02-13 22:33:59,017 - conftest - INFO - ✅ Logged in for cart cleanup
+2026-02-13 22:33:59,018 - conftest - INFO - 🛒 Checking if cart is empty...
+2026-02-13 22:33:59,018 - pages.base_page - INFO - 🛒 Navigating to Cart page
+2026-02-13 22:33:59,018 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com/view_cart
+2026-02-13 22:34:03,119 - conftest - INFO - 🧹 Cart has 4 item(s) — cleaning up...
+2026-02-13 22:34:04,475 - conftest - INFO -    ❌ Removed item 1/4
+2026-02-13 22:34:05,825 - conftest - INFO -    ❌ Removed item 2/4
+2026-02-13 22:34:07,180 - conftest - INFO -    ❌ Removed item 3/4
+2026-02-13 22:34:08,543 - conftest - INFO -    ❌ Removed item 4/4
+2026-02-13 22:34:08,554 - conftest - INFO - ✅ Cart is now empty
+2026-02-13 22:34:08,555 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:34:11,413 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:34:11,415 - test_login_and_shop - INFO - 
+############################################################
+2026-02-13 22:34:11,416 - test_login_and_shop - INFO - 🚀 TEST: Login + Search + Add + Verify
+2026-02-13 22:34:11,416 - test_login_and_shop - INFO - ############################################################
+2026-02-13 22:34:11,417 - test_login_and_shop - INFO - 
+============================================================
+2026-02-13 22:34:11,417 - test_login_and_shop - INFO - 🔐 STEP 1: Login
+2026-02-13 22:34:11,417 - test_login_and_shop - INFO - ============================================================
+2026-02-13 22:34:11,418 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:34:14,077 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:34:14,079 - pages.base_page - INFO - 🔐 Clicking Login link
+2026-02-13 22:34:14,080 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 22:34:19,094 - pages.base_page - WARNING - ❌ Locator 1 failed: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("a[href=\"/login\"]") to be visible
+
+2026-02-13 22:34:19,094 - pages.base_page - INFO - 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Signup") or contains(text(), "Login")]
+2026-02-13 22:34:24,112 - pages.base_page - WARNING - ❌ Locator 2 failed: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("//a[contains(text(), \"Signup\") or contains(text(), \"Login\")]") to be visible
+
+2026-02-13 22:34:24,113 - pages.base_page - INFO - 🔍 Attempt 3/3 - Strategy: text, Value: Signup / Login
+2026-02-13 22:34:29,118 - pages.base_page - WARNING - ❌ Locator 3 failed: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+  - waiting for get_by_text("Signup / Login") to be visible
+
+2026-02-13 22:34:29,119 - pages.base_page - ERROR - 🚫 All 3 locators failed!
+2026-02-13 22:34:31,135 - conftest - ERROR - 📸 Failure screenshot saved: screenshots/FAILED_test_login_search_add_verify_20260213_223429.png
+2026-02-13 22:34:31,137 - conftest - INFO - 
+================================================================================
+2026-02-13 22:34:31,138 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:34:31,138 - conftest - INFO - ================================================================================
+2026-02-13 22:34:31,474 - conftest - INFO - ✅ Browser closed successfully

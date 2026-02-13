@@ -216,3 +216,36 @@ class CartPage(BasePage):
         
         self.logger.info(f"📊 Cart Summary: {len(items)} items, Total: Rs. {total}")
         return summary
+    
+    def clear_cart(self):
+        """Clear all items from cart"""
+    
+        try:
+            self.logger.info("🧹 Clearing cart...")
+            
+            # Get all delete buttons
+            delete_buttons = self.page.locator('a.cart_quantity_delete')
+            count = delete_buttons.count()
+            
+            if count == 0:
+                self.logger.info("   Cart is already empty")
+                return True
+            
+            self.logger.info(f"   Found {count} items to remove")
+            
+            # Delete each item
+            for i in range(count):
+                # Always click the first button (items shift after deletion)
+                try:
+                    self.page.locator('a.cart_quantity_delete').first.click()
+                    time.sleep(0.5)
+                    self.logger.info(f"   Removed item {i+1}/{count}")
+                except:
+                    break
+            
+            self.logger.info("✅ Cart cleared successfully")
+            return True
+            
+        except Exception as e:
+            self.logger.warning(f"⚠️ Could not clear cart: {str(e)}")
+            return False

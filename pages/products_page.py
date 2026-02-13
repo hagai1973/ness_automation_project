@@ -136,8 +136,8 @@ class ProductsPage(BasePage):
                         import time
                         time.sleep(0.5)
                         
-                        # STEP 2: Click "Add to cart" button
-                        add_to_cart_btn = product.locator('a.add-to-cart').first
+                        # STEP 2: Click "Add to cart" button from the overlay (not the hidden one underneath)
+                        add_to_cart_btn = product.locator('.product-overlay a.add-to-cart').first
                         add_to_cart_btn.wait_for(state='visible', timeout=3000)
                         
                         self.logger.info(f"   🛒 Clicking 'Add to cart'...")

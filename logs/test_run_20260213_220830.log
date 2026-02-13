@@ -1,0 +1,344 @@
+2026-02-13 22:08:30,146 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 22:08:30,147 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 22:08:30,148 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 22:08:30,150 - conftest - INFO - 
+================================================================================
+2026-02-13 22:08:30,151 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:08:30,151 - conftest - INFO - ================================================================================
+2026-02-13 22:08:30,156 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:08:32,166 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:08:32,172 - test_login - INFO - 
+############################################################
+2026-02-13 22:08:32,173 - test_login - INFO - 🔐 TEST: Successful Login
+2026-02-13 22:08:32,173 - test_login - INFO - ############################################################
+2026-02-13 22:08:32,174 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:08:36,516 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:08:36,517 - pages.base_page - INFO - 🔐 Clicking Login link
+2026-02-13 22:08:36,517 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 22:08:36,564 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/login"]
+2026-02-13 22:08:37,218 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:08:37,219 - pages.base_page - INFO - 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 22:08:37,219 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 22:08:37,219 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:08:37,246 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:08:37,576 - pages.base_page - INFO - ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 22:08:37,578 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 22:08:37,579 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:08:37,623 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:08:37,942 - pages.base_page - INFO - ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 22:08:38,153 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771013317.png
+2026-02-13 22:08:38,153 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 22:08:38,154 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:08:38,172 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:08:39,240 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:08:41,241 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:08:41,299 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:08:41,301 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:08:41,301 - pages.base_page - INFO - ✅ Login successful!
+2026-02-13 22:08:41,773 - pages.base_page - INFO - 📸 Screenshot saved: after_login_1771013317.png
+2026-02-13 22:08:41,774 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:08:41,794 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:08:41,801 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:08:41,802 - test_login - INFO - ✅ TEST PASSED: User logged in successfully
+2026-02-13 22:08:41,802 - test_login - INFO - ############################################################
+
+2026-02-13 22:08:41,806 - conftest - INFO - 
+================================================================================
+2026-02-13 22:08:41,808 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:08:41,808 - conftest - INFO - ================================================================================
+2026-02-13 22:08:42,179 - conftest - INFO - ✅ Browser closed successfully
+2026-02-13 22:08:42,183 - conftest - INFO - 
+================================================================================
+2026-02-13 22:08:42,184 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:08:42,184 - conftest - INFO - ================================================================================
+2026-02-13 22:08:42,184 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:08:44,090 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:08:44,092 - test_login - INFO - 
+############################################################
+2026-02-13 22:08:44,093 - test_login - INFO - 🔐 TEST: Login with Invalid Credentials
+2026-02-13 22:08:44,093 - test_login - INFO - ############################################################
+2026-02-13 22:08:44,094 - pages.base_page - INFO - 🔐 Navigating to Login page
+2026-02-13 22:08:44,094 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com/login
+2026-02-13 22:08:47,719 - pages.base_page - INFO - 🔐 Attempting login with email: invalid@test.com
+2026-02-13 22:08:47,720 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 22:08:47,720 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:08:47,769 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:08:48,107 - pages.base_page - INFO - ⌨️ Typed text: 'invalid@test.com'
+2026-02-13 22:08:48,108 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 22:08:48,108 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:08:48,123 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:08:48,455 - pages.base_page - INFO - ⌨️ Typed text: 'wrongpassword'
+2026-02-13 22:08:48,573 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771013328.png
+2026-02-13 22:08:48,574 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 22:08:48,574 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:08:48,590 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:08:49,211 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:08:51,212 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:08:54,234 - pages.base_page - WARNING - ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("a[href=\"/logout\"]") to be visible
+
+2026-02-13 22:08:54,235 - pages.base_page - INFO - 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 22:08:57,251 - pages.base_page - WARNING - ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
+
+2026-02-13 22:08:57,251 - pages.base_page - INFO - 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 22:09:00,270 - pages.base_page - WARNING - ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//li/a[@href=\"/logout\"]") to be visible
+
+2026-02-13 22:09:00,271 - pages.base_page - ERROR - 🚫 All 3 locators failed!
+2026-02-13 22:09:00,404 - pages.base_page - INFO - ❌ User is not logged in (Logout link not found)
+2026-02-13 22:09:00,405 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: p[style*="color: red"]
+2026-02-13 22:09:00,422 - pages.base_page - INFO - ✅ Success with locator 1: css=p[style*="color: red"]
+2026-02-13 22:09:00,430 - pages.base_page - INFO - 📝 Retrieved text: 'Your email or password is incorrect!'
+2026-02-13 22:09:00,431 - pages.base_page - ERROR - ❌ Login failed: Your email or password is incorrect!
+2026-02-13 22:09:00,533 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:09:03,540 - pages.base_page - WARNING - ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("a[href=\"/logout\"]") to be visible
+
+2026-02-13 22:09:03,540 - pages.base_page - INFO - 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 22:09:06,544 - pages.base_page - WARNING - ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
+
+2026-02-13 22:09:06,544 - pages.base_page - INFO - 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 22:09:09,568 - pages.base_page - WARNING - ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//li/a[@href=\"/logout\"]") to be visible
+
+2026-02-13 22:09:09,568 - pages.base_page - ERROR - 🚫 All 3 locators failed!
+2026-02-13 22:09:09,672 - pages.base_page - INFO - ❌ User is not logged in (Logout link not found)
+2026-02-13 22:09:09,673 - test_login - INFO - ✅ TEST PASSED: Login correctly failed with invalid credentials
+2026-02-13 22:09:09,673 - test_login - INFO - ############################################################
+
+2026-02-13 22:09:09,676 - conftest - INFO - 
+================================================================================
+2026-02-13 22:09:09,676 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:09:09,677 - conftest - INFO - ================================================================================
+2026-02-13 22:09:09,920 - conftest - INFO - ✅ Browser closed successfully
+2026-02-13 22:09:09,924 - conftest - INFO - 
+================================================================================
+2026-02-13 22:09:09,925 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:09:09,925 - conftest - INFO - ================================================================================
+2026-02-13 22:09:09,925 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:09:11,883 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:09:11,895 - test_login - INFO - 
+############################################################
+2026-02-13 22:09:11,907 - test_login - INFO - 🚪 TEST: Logout Functionality
+2026-02-13 22:09:11,908 - test_login - INFO - ############################################################
+2026-02-13 22:09:11,908 - pages.base_page - INFO - 🔐 Navigating to Login page
+2026-02-13 22:09:11,908 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com/login
+2026-02-13 22:09:16,270 - pages.base_page - INFO - 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 22:09:16,270 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 22:09:16,270 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:09:16,317 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:09:16,644 - pages.base_page - INFO - ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 22:09:16,645 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 22:09:16,646 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:09:16,664 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:09:16,986 - pages.base_page - INFO - ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 22:09:17,108 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771013356.png
+2026-02-13 22:09:17,109 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 22:09:17,109 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:09:17,122 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:09:18,233 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:09:20,234 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:09:20,278 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:09:20,278 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:09:20,279 - pages.base_page - INFO - ✅ Login successful!
+2026-02-13 22:09:20,539 - pages.base_page - INFO - 📸 Screenshot saved: after_login_1771013356.png
+2026-02-13 22:09:20,540 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:09:20,552 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:09:20,552 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:09:20,553 - pages.base_page - INFO - 🚪 Logging out...
+2026-02-13 22:09:20,553 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:09:20,563 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:09:21,407 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:09:22,409 - pages.base_page - INFO - ✅ Logged out successfully
+2026-02-13 22:09:22,410 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:09:25,432 - pages.base_page - WARNING - ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("a[href=\"/logout\"]") to be visible
+
+2026-02-13 22:09:25,433 - pages.base_page - INFO - 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 22:09:28,447 - pages.base_page - WARNING - ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
+
+2026-02-13 22:09:28,448 - pages.base_page - INFO - 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 22:09:31,459 - pages.base_page - WARNING - ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//li/a[@href=\"/logout\"]") to be visible
+
+2026-02-13 22:09:31,459 - pages.base_page - ERROR - 🚫 All 3 locators failed!
+2026-02-13 22:09:31,561 - pages.base_page - INFO - ❌ User is not logged in (Logout link not found)
+2026-02-13 22:09:31,562 - test_login - INFO - ✅ TEST PASSED: Logout successful
+2026-02-13 22:09:31,563 - test_login - INFO - ############################################################
+
+2026-02-13 22:09:31,567 - conftest - INFO - 
+================================================================================
+2026-02-13 22:09:31,567 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:09:31,568 - conftest - INFO - ================================================================================
+2026-02-13 22:09:31,841 - conftest - INFO - ✅ Browser closed successfully
+2026-02-13 22:09:31,845 - conftest - INFO - 
+================================================================================
+2026-02-13 22:09:31,846 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:09:31,846 - conftest - INFO - ================================================================================
+2026-02-13 22:09:31,847 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:09:33,723 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:09:33,732 - test_login_and_shop - INFO - 
+############################################################
+2026-02-13 22:09:33,772 - test_login_and_shop - INFO - 🚀 TEST: Login + Search + Add + Verify
+2026-02-13 22:09:33,773 - test_login_and_shop - INFO - ############################################################
+2026-02-13 22:09:33,774 - test_login_and_shop - INFO - 
+============================================================
+2026-02-13 22:09:33,775 - test_login_and_shop - INFO - 🔐 STEP 1: Login
+2026-02-13 22:09:33,775 - test_login_and_shop - INFO - ============================================================
+2026-02-13 22:09:33,775 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:09:37,799 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:09:37,800 - pages.base_page - INFO - 🔐 Clicking Login link
+2026-02-13 22:09:37,801 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 22:09:37,853 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/login"]
+2026-02-13 22:09:38,496 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:09:38,498 - pages.base_page - INFO - 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 22:09:38,499 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 22:09:38,500 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:09:38,528 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:09:38,849 - pages.base_page - INFO - ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 22:09:38,850 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 22:09:38,851 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:09:38,866 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:09:39,180 - pages.base_page - INFO - ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 22:09:39,376 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771013379.png
+2026-02-13 22:09:39,376 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 22:09:39,377 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:09:39,392 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:09:40,487 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:09:42,488 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:09:42,544 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:09:42,544 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:09:42,545 - pages.base_page - INFO - ✅ Login successful!
+2026-02-13 22:09:43,121 - pages.base_page - INFO - 📸 Screenshot saved: after_login_1771013379.png
+2026-02-13 22:09:43,122 - test_login_and_shop - INFO - ✅ Step 1 Complete: Logged in successfully
+2026-02-13 22:09:43,122 - test_login_and_shop - INFO - 
+============================================================
+2026-02-13 22:09:43,122 - test_login_and_shop - INFO - 🛍️ STEP 2: Search and Add to Cart
+2026-02-13 22:09:43,123 - test_login_and_shop - INFO - ============================================================
+2026-02-13 22:09:43,123 - pages.base_page - INFO - 🛍️ Clicking Products link
+2026-02-13 22:09:43,124 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
+2026-02-13 22:09:43,139 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/products"]
+2026-02-13 22:09:43,508 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:10:14,358 - conftest - ERROR - 📸 Failure screenshot saved: screenshots/FAILED_test_login_search_add_verify_20260213_221013.png
+2026-02-13 22:10:14,362 - conftest - INFO - 
+================================================================================
+2026-02-13 22:10:14,363 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:10:14,365 - conftest - INFO - ================================================================================
+2026-02-13 22:10:14,714 - conftest - INFO - ✅ Browser closed successfully
+2026-02-13 22:10:14,719 - conftest - INFO - 
+================================================================================
+2026-02-13 22:10:14,719 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:10:14,720 - conftest - INFO - ================================================================================
+2026-02-13 22:10:14,720 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:10:16,637 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:10:16,646 - test_shopping - INFO - 
+############################################################
+2026-02-13 22:10:16,683 - test_shopping - INFO - 🚀 TEST: search_tshirt_under_budget
+2026-02-13 22:10:16,689 - test_shopping - INFO - ############################################################
+2026-02-13 22:10:16,690 - test_shopping - INFO - 
+============================================================
+2026-02-13 22:10:16,690 - test_shopping - INFO - 🔍 FUNCTION 1: Search and Add Items to Cart
+2026-02-13 22:10:16,690 - test_shopping - INFO -    Query: 'tshirt' | Max Price: Rs. 1500 | Limit: 3
+2026-02-13 22:10:16,691 - test_shopping - INFO - ============================================================
+2026-02-13 22:10:16,691 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:10:20,039 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:10:20,040 - pages.base_page - INFO - 🛍️ Clicking Products link
+2026-02-13 22:10:20,040 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
+2026-02-13 22:10:20,098 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/products"]
+2026-02-13 22:10:20,491 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:10:24,616 - pages.base_page - INFO - ✅ On Products page
+2026-02-13 22:10:24,617 - pages.base_page - INFO - 🔍 Searching for: 'tshirt'
+2026-02-13 22:10:24,617 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #search_product
+2026-02-13 22:10:24,656 - pages.base_page - INFO - ✅ Success with locator 1: css=#search_product
+2026-02-13 22:10:24,984 - pages.base_page - INFO - ⌨️ Typed text: 'tshirt'
+2026-02-13 22:10:24,985 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #submit_search
+2026-02-13 22:10:25,004 - pages.base_page - INFO - ✅ Success with locator 1: css=#submit_search
+2026-02-13 22:10:25,661 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:10:31,269 - pages.base_page - INFO - ✅ Search completed for 'tshirt'
+2026-02-13 22:10:31,271 - pages.base_page - INFO - 💰 Filtering and adding products under Rs. 1500, limit: 3
+2026-02-13 22:10:31,296 - pages.base_page - INFO - 📦 Found 6 total products
+2026-02-13 22:10:31,309 - pages.base_page - INFO -    Product 1: Price = Rs. 400.0
+2026-02-13 22:10:31,318 - pages.base_page - INFO -    ✅ Adding: Men Tshirt - Rs. 400.0
+2026-02-13 22:10:31,318 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 22:10:32,174 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 22:10:34,159 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 22:10:34,541 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 22:10:34,541 - pages.base_page - INFO -    ✅ Added to cart (1/3)
+2026-02-13 22:10:34,549 - pages.base_page - INFO -    Product 2: Price = Rs. 1299.0
+2026-02-13 22:10:34,557 - pages.base_page - INFO -    ✅ Adding: Pure Cotton V-Neck T-Shirt - Rs. 1299.0
+2026-02-13 22:10:34,557 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 22:10:35,450 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 22:10:37,456 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 22:10:37,829 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 22:10:37,830 - pages.base_page - INFO -    ✅ Added to cart (2/3)
+2026-02-13 22:10:37,842 - pages.base_page - INFO -    Product 3: Price = Rs. 1000.0
+2026-02-13 22:10:37,850 - pages.base_page - INFO -    ✅ Adding: Green Side Placket Detail T-Shirt - Rs. 1000.0
+2026-02-13 22:10:37,851 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 22:10:38,727 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 22:10:40,750 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 22:10:41,109 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 22:10:41,110 - pages.base_page - INFO -    ✅ Added to cart (3/3)
+2026-02-13 22:10:41,111 - pages.base_page - INFO - ✅ Successfully added 3 products to cart
+2026-02-13 22:10:41,111 - test_shopping - INFO - ✅ Added 3 products to cart
+2026-02-13 22:10:41,118 - test_shopping - INFO - ✅ Step 1 Complete: Added 3 items to cart
+2026-02-13 22:10:41,119 - test_shopping - INFO - 
+============================================================
+2026-02-13 22:10:41,120 - test_shopping - INFO - ✅ FUNCTION 2: Assert Cart Total Not Exceeds
+2026-02-13 22:10:41,120 - test_shopping - INFO -    Budget per item: Rs. 1500
+2026-02-13 22:10:41,121 - test_shopping - INFO -    Items count: 3
+2026-02-13 22:10:41,121 - test_shopping - INFO - ============================================================
+2026-02-13 22:10:41,121 - pages.base_page - INFO - 🛒 Clicking Cart link
+2026-02-13 22:10:41,121 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: xpath, Value: //header//a[@href="/view_cart"]
+2026-02-13 22:10:41,135 - pages.base_page - INFO - ✅ Success with locator 1: xpath=//header//a[@href="/view_cart"]
+2026-02-13 22:10:41,790 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:10:43,304 - pages.base_page - INFO - ✅ On Cart page
+2026-02-13 22:10:43,305 - pages.base_page - INFO - 🔍 Verifying cart total...
+2026-02-13 22:10:43,305 - pages.base_page - INFO -    Budget per item: Rs. 1500
+2026-02-13 22:10:43,306 - pages.base_page - INFO -    Items count: 3
+2026-02-13 22:10:43,306 - pages.base_page - INFO -    Threshold: Rs. 4500
+2026-02-13 22:10:43,328 - pages.base_page - INFO - 📋 Processing 3 cart items
+2026-02-13 22:10:43,359 - pages.base_page - INFO -    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
+2026-02-13 22:10:43,382 - pages.base_page - INFO -    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
+2026-02-13 22:10:43,423 - pages.base_page - INFO -    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
+2026-02-13 22:10:43,424 - pages.base_page - INFO - 💰 Calculated cart total: Rs. 2699.0
+2026-02-13 22:10:43,425 - pages.base_page - INFO -    Actual total: Rs. 2699.0
+2026-02-13 22:10:43,695 - pages.base_page - INFO - 📸 Screenshot saved: screenshots/cart_verification_1771013443.png
+2026-02-13 22:10:43,696 - pages.base_page - INFO - ✅ PASS: Cart total Rs. 2699.0 is within budget Rs. 4500
+2026-02-13 22:10:43,703 - pages.base_page - INFO - 📋 Processing 3 cart items
+2026-02-13 22:10:43,730 - pages.base_page - INFO -    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
+2026-02-13 22:10:43,759 - pages.base_page - INFO -    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
+2026-02-13 22:10:43,787 - pages.base_page - INFO -    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
+2026-02-13 22:10:43,792 - pages.base_page - INFO - 📋 Processing 3 cart items
+2026-02-13 22:10:43,813 - pages.base_page - INFO -    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
+2026-02-13 22:10:43,839 - pages.base_page - INFO -    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
+2026-02-13 22:10:43,864 - pages.base_page - INFO -    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
+2026-02-13 22:10:43,864 - pages.base_page - INFO - 💰 Calculated cart total: Rs. 2699.0
+2026-02-13 22:10:43,865 - pages.base_page - INFO - 📊 Cart Summary: 3 items, Total: Rs. 2699.0
+2026-02-13 22:10:43,865 - test_shopping - INFO - 
+📊 Cart Summary:
+2026-02-13 22:10:43,865 - test_shopping - INFO -    Items in cart: 3
+2026-02-13 22:10:43,866 - test_shopping - INFO -    Total amount: Rs. 2699.0
+2026-02-13 22:10:43,866 - test_shopping - INFO -    Budget limit: Rs. 4500
+2026-02-13 22:10:43,867 - test_shopping - INFO - ✅ PASSED: Cart total is within budget!
+2026-02-13 22:10:43,868 - test_shopping - INFO - ✅ Step 2 Complete: Cart total verified
+2026-02-13 22:10:43,868 - test_shopping - INFO - 
+############################################################
+2026-02-13 22:10:43,868 - test_shopping - INFO - 🎉 TEST PASSED: search_tshirt_under_budget
+2026-02-13 22:10:43,869 - test_shopping - INFO - ############################################################
+2026-02-13 22:10:43,871 - conftest - INFO - 
+================================================================================
+2026-02-13 22:10:43,871 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:10:43,872 - conftest - INFO - ================================================================================
+2026-02-13 22:10:44,307 - conftest - INFO - ✅ Browser closed successfully

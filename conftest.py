@@ -175,6 +175,69 @@ def pytest_runtest_makereport(item, call):
 
 
 # ============================================================================
+# CART CLEANUP FIXTURE
+# ============================================================================
+
+@pytest.fixture(scope="function")
+def ensure_empty_cart(page, test_data):
+    """
+    Ensure the cart is empty before the test runs.
+    Logs in first, then navigates to cart, removes all items if any exist,
+    then returns to home page.
+    Scope: function
+    """
+    from pages.cart_page import CartPage
+    from pages.home_page import HomePage
+    from pages.login_page import LoginPage
+
+    # Step 1: Login first so we clear the authenticated user's cart
+    logger.info("🔐 Logging in before cart cleanup...")
+    home_page = HomePage(page)
+    home_page.navigate()
+    home_page.go_to_login()
+
+    login_page = LoginPage(page)
+    email = test_data['user_credentials']['email']
+    password = test_data['user_credentials']['password']
+    login_page.login(email, password)
+    logger.info("✅ Logged in for cart cleanup")
+
+    # Step 2: Navigate to cart and clean it
+    logger.info("🛒 Checking if cart is empty...")
+    cart_page = CartPage(page)
+    cart_page.navigate_to_cart()
+
+    # Check for items and remove them
+    delete_buttons = page.locator('a.cart_quantity_delete')
+    count = delete_buttons.count()
+
+    if count > 0:
+        logger.info(f"🧹 Cart has {count} item(s) — cleaning up...")
+        for i in range(count):
+            try:
+                page.locator('a.cart_quantity_delete').first.click()
+                # Wait for the item to be removed from DOM
+                page.wait_for_timeout(1000)
+                logger.info(f"   ❌ Removed item {i + 1}/{count}")
+            except Exception:
+                break
+
+        # Verify cart is now empty
+        remaining = page.locator('a.cart_quantity_delete').count()
+        if remaining == 0:
+            logger.info("✅ Cart is now empty")
+        else:
+            logger.warning(f"⚠️ {remaining} item(s) still remain in cart")
+    else:
+        logger.info("✅ Cart is already empty")
+
+    # Step 3: Navigate back to home page so test starts from a clean state
+    home_page.navigate()
+
+    yield
+
+
+# ============================================================================
 # TEST MARKERS
 # ============================================================================
 

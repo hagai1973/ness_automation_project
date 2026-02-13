@@ -1,404 +1,185 @@
-2026-02-13 21:06:09 [    INFO] [conftest.py:49] 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
-2026-02-13 21:06:09 [    INFO] [conftest.py:54] ✅ Test data loaded: 3 scenarios
-2026-02-13 21:06:09 [    INFO] [conftest.py:65] 🌐 Base URL: https://automationexercise.com
-2026-02-13 21:06:09 [    INFO] [conftest.py:82] 
+2026-02-13 22:59:40 [    INFO] [conftest.py:49] 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 22:59:40 [    INFO] [conftest.py:54] ✅ Test data loaded: 3 scenarios
+2026-02-13 22:59:40 [    INFO] [conftest.py:65] 🌐 Base URL: https://automationexercise.com
+2026-02-13 22:59:40 [    INFO] [conftest.py:82] 
 ================================================================================
-2026-02-13 21:06:09 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
-2026-02-13 21:06:09 [    INFO] [conftest.py:84] ================================================================================
-2026-02-13 21:06:09 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
-2026-02-13 21:06:11 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
-2026-02-13 21:06:11 [    INFO] [test_login.py:29] 
+2026-02-13 22:59:40 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
+2026-02-13 22:59:40 [    INFO] [conftest.py:84] ================================================================================
+2026-02-13 22:59:40 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
+2026-02-13 22:59:42 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:59:42 [    INFO] [test_login.py:28] 
 ############################################################
-2026-02-13 21:06:11 [    INFO] [test_login.py:30] 🔐 TEST: Successful Login
-2026-02-13 21:06:11 [    INFO] [test_login.py:31] ############################################################
-2026-02-13 21:06:11 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com
-2026-02-13 21:06:15 [    INFO] [home_page.py:40] 🏠 Navigated to Home Page
-2026-02-13 21:06:15 [    INFO] [home_page.py:53] 🔐 Clicking Login link
-2026-02-13 21:06:15 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
-2026-02-13 21:06:15 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/login"]
-2026-02-13 21:06:16 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:06:16 [    INFO] [login_page.py:68] 🔐 Attempting login with email: hagai.tregerman@gmail.com
-2026-02-13 21:06:16 [    INFO] [login_page.py:71] 📧 Entering email...
-2026-02-13 21:06:16 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
-2026-02-13 21:06:16 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
-2026-02-13 21:06:16 [    INFO] [base_page.py:73] ⌨️ Typed text: 'hagai.tregerman@gmail.com'
-2026-02-13 21:06:16 [    INFO] [login_page.py:75] 🔒 Entering password...
-2026-02-13 21:06:16 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
-2026-02-13 21:06:16 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
-2026-02-13 21:06:17 [    INFO] [base_page.py:73] ⌨️ Typed text: 'KMsuTYNyY@Q5y'
-2026-02-13 21:06:17 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771009577.png
-2026-02-13 21:06:17 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
-2026-02-13 21:06:17 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
-2026-02-13 21:06:17 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
-2026-02-13 21:06:18 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:06:20 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:20 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
-2026-02-13 21:06:20 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
-2026-02-13 21:06:20 [    INFO] [login_page.py:92] ✅ Login successful!
-2026-02-13 21:06:20 [    INFO] [login_page.py:96] 📸 Screenshot saved: after_login_1771009577.png
-2026-02-13 21:06:20 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:20 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
-2026-02-13 21:06:20 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
-2026-02-13 21:06:20 [    INFO] [test_login.py:52] ✅ TEST PASSED: User logged in successfully
-2026-02-13 21:06:20 [    INFO] [test_login.py:53] ############################################################
+2026-02-13 22:59:42 [    INFO] [test_login.py:29] 🔐 TEST: Successful Login
+2026-02-13 22:59:42 [    INFO] [test_login.py:30] ############################################################
+2026-02-13 22:59:42 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:59:47 [    INFO] [home_page.py:40] 🏠 Navigated to Home Page
+2026-02-13 22:59:47 [    INFO] [home_page.py:53] 🔐 Clicking Login link
+2026-02-13 22:59:47 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 22:59:47 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/login"]
+2026-02-13 22:59:47 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
+2026-02-13 22:59:47 [    INFO] [login_page.py:68] 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 22:59:47 [    INFO] [login_page.py:71] 📧 Entering email...
+2026-02-13 22:59:47 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:59:47 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:59:48 [    INFO] [base_page.py:73] ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 22:59:48 [    INFO] [login_page.py:75] 🔒 Entering password...
+2026-02-13 22:59:48 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:59:48 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:59:48 [    INFO] [base_page.py:73] ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 22:59:48 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771016388.png
+2026-02-13 22:59:48 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
+2026-02-13 22:59:48 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:59:48 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:59:49 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
+2026-02-13 22:59:51 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:59:51 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:59:51 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
+2026-02-13 22:59:51 [    INFO] [login_page.py:92] ✅ Login successful!
+2026-02-13 22:59:52 [    INFO] [login_page.py:96] 📸 Screenshot saved: after_login_1771016388.png
+2026-02-13 22:59:52 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:59:52 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:59:52 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
+2026-02-13 22:59:52 [    INFO] [test_login.py:49] ✅ TEST PASSED: User logged in successfully
+2026-02-13 22:59:52 [    INFO] [test_login.py:50] ############################################################
 
-2026-02-13 21:06:20 [    INFO] [conftest.py:113] 
+2026-02-13 22:59:52 [    INFO] [conftest.py:113] 
 ================================================================================
-2026-02-13 21:06:20 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
-2026-02-13 21:06:20 [    INFO] [conftest.py:115] ================================================================================
-2026-02-13 21:06:20 [    INFO] [conftest.py:122] ✅ Browser closed successfully
-2026-02-13 21:06:21 [    INFO] [conftest.py:82] 
+2026-02-13 22:59:52 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
+2026-02-13 22:59:52 [    INFO] [conftest.py:115] ================================================================================
+2026-02-13 22:59:52 [    INFO] [conftest.py:122] ✅ Browser closed successfully
+2026-02-13 22:59:52 [    INFO] [conftest.py:82] 
 ================================================================================
-2026-02-13 21:06:21 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
-2026-02-13 21:06:21 [    INFO] [conftest.py:84] ================================================================================
-2026-02-13 21:06:21 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
-2026-02-13 21:06:22 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
-2026-02-13 21:06:22 [    INFO] [test_login.py:66] 
+2026-02-13 22:59:52 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
+2026-02-13 22:59:52 [    INFO] [conftest.py:84] ================================================================================
+2026-02-13 22:59:52 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
+2026-02-13 22:59:54 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:59:54 [    INFO] [test_login.py:59] 
 ############################################################
-2026-02-13 21:06:22 [    INFO] [test_login.py:67] 🔐 TEST: Login with Invalid Credentials
-2026-02-13 21:06:22 [    INFO] [test_login.py:68] ############################################################
-2026-02-13 21:06:22 [    INFO] [login_page.py:52] 🔐 Navigating to Login page
-2026-02-13 21:06:22 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com/login
-2026-02-13 21:06:26 [    INFO] [login_page.py:68] 🔐 Attempting login with email: invalid@test.com
-2026-02-13 21:06:26 [    INFO] [login_page.py:71] 📧 Entering email...
-2026-02-13 21:06:26 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
-2026-02-13 21:06:26 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
-2026-02-13 21:06:26 [    INFO] [base_page.py:73] ⌨️ Typed text: 'invalid@test.com'
-2026-02-13 21:06:26 [    INFO] [login_page.py:75] 🔒 Entering password...
-2026-02-13 21:06:26 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
-2026-02-13 21:06:26 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
-2026-02-13 21:06:27 [    INFO] [base_page.py:73] ⌨️ Typed text: 'wrongpassword'
-2026-02-13 21:06:27 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771009587.png
-2026-02-13 21:06:27 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
-2026-02-13 21:06:27 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
-2026-02-13 21:06:27 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
-2026-02-13 21:06:28 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:06:30 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:33 [ WARNING] [base_page.py:54] ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 22:59:54 [    INFO] [test_login.py:60] 🔐 TEST: Login with Invalid Credentials
+2026-02-13 22:59:54 [    INFO] [test_login.py:61] ############################################################
+2026-02-13 22:59:54 [    INFO] [login_page.py:52] 🔐 Navigating to Login page
+2026-02-13 22:59:54 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com/login
+2026-02-13 22:59:57 [    INFO] [login_page.py:68] 🔐 Attempting login with email: invalid@test.com
+2026-02-13 22:59:57 [    INFO] [login_page.py:71] 📧 Entering email...
+2026-02-13 22:59:57 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:59:57 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:59:58 [    INFO] [base_page.py:73] ⌨️ Typed text: 'invalid@test.com'
+2026-02-13 22:59:58 [    INFO] [login_page.py:75] 🔒 Entering password...
+2026-02-13 22:59:58 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:59:58 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:59:58 [    INFO] [base_page.py:73] ⌨️ Typed text: 'wrongpassword'
+2026-02-13 22:59:58 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771016398.png
+2026-02-13 22:59:58 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
+2026-02-13 22:59:58 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:59:58 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:59:59 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
+2026-02-13 23:00:01 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 23:00:04 [ WARNING] [base_page.py:54] ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("a[href=\"/logout\"]") to be visible
 
-2026-02-13 21:06:33 [    INFO] [base_page.py:34] 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
-2026-02-13 21:06:36 [ WARNING] [base_page.py:54] ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:04 [    INFO] [base_page.py:34] 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 23:00:07 [ WARNING] [base_page.py:54] ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
 
-2026-02-13 21:06:36 [    INFO] [base_page.py:34] 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
-2026-02-13 21:06:39 [ WARNING] [base_page.py:54] ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:07 [    INFO] [base_page.py:34] 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 23:00:10 [ WARNING] [base_page.py:54] ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("//li/a[@href=\"/logout\"]") to be visible
 
-2026-02-13 21:06:39 [   ERROR] [base_page.py:56] 🚫 All 3 locators failed!
-2026-02-13 21:06:39 [    INFO] [login_page.py:129] ❌ User is not logged in (Logout link not found)
-2026-02-13 21:06:39 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: p[style*="color: red"]
-2026-02-13 21:06:39 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=p[style*="color: red"]
-2026-02-13 21:06:39 [    INFO] [base_page.py:80] 📝 Retrieved text: 'Your email or password is incorrect!'
-2026-02-13 21:06:39 [   ERROR] [login_page.py:103] ❌ Login failed: Your email or password is incorrect!
-2026-02-13 21:06:39 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:42 [ WARNING] [base_page.py:54] ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:10 [   ERROR] [base_page.py:56] 🚫 All 3 locators failed!
+2026-02-13 23:00:10 [    INFO] [login_page.py:129] ❌ User is not logged in (Logout link not found)
+2026-02-13 23:00:10 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: p[style*="color: red"]
+2026-02-13 23:00:10 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=p[style*="color: red"]
+2026-02-13 23:00:10 [    INFO] [base_page.py:80] 📝 Retrieved text: 'Your email or password is incorrect!'
+2026-02-13 23:00:10 [   ERROR] [login_page.py:103] ❌ Login failed: Your email or password is incorrect!
+2026-02-13 23:00:10 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 23:00:13 [ WARNING] [base_page.py:54] ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("a[href=\"/logout\"]") to be visible
 
-2026-02-13 21:06:42 [    INFO] [base_page.py:34] 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
-2026-02-13 21:06:45 [ WARNING] [base_page.py:54] ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:13 [    INFO] [base_page.py:34] 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 23:00:16 [ WARNING] [base_page.py:54] ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
 
-2026-02-13 21:06:45 [    INFO] [base_page.py:34] 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
-2026-02-13 21:06:48 [ WARNING] [base_page.py:54] ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:16 [    INFO] [base_page.py:34] 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 23:00:19 [ WARNING] [base_page.py:54] ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("//li/a[@href=\"/logout\"]") to be visible
 
-2026-02-13 21:06:48 [   ERROR] [base_page.py:56] 🚫 All 3 locators failed!
-2026-02-13 21:06:48 [    INFO] [login_page.py:129] ❌ User is not logged in (Logout link not found)
-2026-02-13 21:06:48 [    INFO] [test_login.py:81] ✅ TEST PASSED: Login correctly failed with invalid credentials
-2026-02-13 21:06:48 [    INFO] [test_login.py:82] ############################################################
+2026-02-13 23:00:19 [   ERROR] [base_page.py:56] 🚫 All 3 locators failed!
+2026-02-13 23:00:19 [    INFO] [login_page.py:129] ❌ User is not logged in (Logout link not found)
+2026-02-13 23:00:19 [    INFO] [test_login.py:74] ✅ TEST PASSED: Login correctly failed with invalid credentials
+2026-02-13 23:00:19 [    INFO] [test_login.py:75] ############################################################
 
-2026-02-13 21:06:48 [    INFO] [conftest.py:113] 
+2026-02-13 23:00:19 [    INFO] [conftest.py:113] 
 ================================================================================
-2026-02-13 21:06:48 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
-2026-02-13 21:06:48 [    INFO] [conftest.py:115] ================================================================================
-2026-02-13 21:06:48 [    INFO] [conftest.py:122] ✅ Browser closed successfully
-2026-02-13 21:06:48 [    INFO] [conftest.py:82] 
+2026-02-13 23:00:19 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
+2026-02-13 23:00:19 [    INFO] [conftest.py:115] ================================================================================
+2026-02-13 23:00:20 [    INFO] [conftest.py:122] ✅ Browser closed successfully
+2026-02-13 23:00:20 [    INFO] [conftest.py:82] 
 ================================================================================
-2026-02-13 21:06:48 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
-2026-02-13 21:06:48 [    INFO] [conftest.py:84] ================================================================================
-2026-02-13 21:06:48 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
-2026-02-13 21:06:50 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
-2026-02-13 21:06:50 [    INFO] [test_login.py:95] 
+2026-02-13 23:00:20 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
+2026-02-13 23:00:20 [    INFO] [conftest.py:84] ================================================================================
+2026-02-13 23:00:20 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
+2026-02-13 23:00:22 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 23:00:22 [    INFO] [test_login.py:84] 
 ############################################################
-2026-02-13 21:06:50 [    INFO] [test_login.py:96] 🚪 TEST: Logout Functionality
-2026-02-13 21:06:50 [    INFO] [test_login.py:97] ############################################################
-2026-02-13 21:06:50 [    INFO] [login_page.py:52] 🔐 Navigating to Login page
-2026-02-13 21:06:50 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com/login
-2026-02-13 21:06:54 [    INFO] [login_page.py:68] 🔐 Attempting login with email: hagai.tregerman@gmail.com
-2026-02-13 21:06:54 [    INFO] [login_page.py:71] 📧 Entering email...
-2026-02-13 21:06:54 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
-2026-02-13 21:06:55 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
-2026-02-13 21:06:55 [    INFO] [base_page.py:73] ⌨️ Typed text: 'hagai.tregerman@gmail.com'
-2026-02-13 21:06:55 [    INFO] [login_page.py:75] 🔒 Entering password...
-2026-02-13 21:06:55 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
-2026-02-13 21:06:55 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
-2026-02-13 21:06:55 [    INFO] [base_page.py:73] ⌨️ Typed text: 'KMsuTYNyY@Q5y'
-2026-02-13 21:06:55 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771009615.png
-2026-02-13 21:06:55 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
-2026-02-13 21:06:55 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
-2026-02-13 21:06:55 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
-2026-02-13 21:06:57 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:06:59 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:59 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
-2026-02-13 21:06:59 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
-2026-02-13 21:06:59 [    INFO] [login_page.py:92] ✅ Login successful!
-2026-02-13 21:06:59 [    INFO] [login_page.py:96] 📸 Screenshot saved: after_login_1771009615.png
-2026-02-13 21:06:59 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:59 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
-2026-02-13 21:06:59 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
-2026-02-13 21:06:59 [    INFO] [login_page.py:136] 🚪 Logging out...
-2026-02-13 21:06:59 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:06:59 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
-2026-02-13 21:07:00 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:01 [    INFO] [login_page.py:139] ✅ Logged out successfully
-2026-02-13 21:07:01 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:07:04 [ WARNING] [base_page.py:54] ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:22 [    INFO] [test_login.py:85] 🚪 TEST: Logout Functionality
+2026-02-13 23:00:22 [    INFO] [test_login.py:86] ############################################################
+2026-02-13 23:00:22 [    INFO] [login_page.py:52] 🔐 Navigating to Login page
+2026-02-13 23:00:22 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com/login
+2026-02-13 23:00:26 [    INFO] [login_page.py:68] 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 23:00:26 [    INFO] [login_page.py:71] 📧 Entering email...
+2026-02-13 23:00:26 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 23:00:26 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 23:00:26 [    INFO] [base_page.py:73] ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 23:00:26 [    INFO] [login_page.py:75] 🔒 Entering password...
+2026-02-13 23:00:26 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 23:00:27 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 23:00:27 [    INFO] [base_page.py:73] ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 23:00:27 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771016427.png
+2026-02-13 23:00:27 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
+2026-02-13 23:00:27 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 23:00:27 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 23:00:28 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
+2026-02-13 23:00:30 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 23:00:30 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 23:00:30 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
+2026-02-13 23:00:30 [    INFO] [login_page.py:92] ✅ Login successful!
+2026-02-13 23:00:30 [    INFO] [login_page.py:96] 📸 Screenshot saved: after_login_1771016427.png
+2026-02-13 23:00:30 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 23:00:30 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 23:00:30 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
+2026-02-13 23:00:30 [    INFO] [login_page.py:136] 🚪 Logging out...
+2026-02-13 23:00:30 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 23:00:31 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 23:00:31 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
+2026-02-13 23:00:32 [    INFO] [login_page.py:139] ✅ Logged out successfully
+2026-02-13 23:00:32 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 23:00:35 [ WARNING] [base_page.py:54] ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("a[href=\"/logout\"]") to be visible
 
-2026-02-13 21:07:04 [    INFO] [base_page.py:34] 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
-2026-02-13 21:07:07 [ WARNING] [base_page.py:54] ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:35 [    INFO] [base_page.py:34] 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 23:00:38 [ WARNING] [base_page.py:54] ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
 
-2026-02-13 21:07:07 [    INFO] [base_page.py:34] 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
-2026-02-13 21:07:10 [ WARNING] [base_page.py:54] ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
+2026-02-13 23:00:38 [    INFO] [base_page.py:34] 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 23:00:41 [ WARNING] [base_page.py:54] ❌ Locator 3 failed: Locator.wait_for: Timeout 3000ms exceeded.
 Call log:
   - waiting for locator("//li/a[@href=\"/logout\"]") to be visible
 
-2026-02-13 21:07:10 [   ERROR] [base_page.py:56] 🚫 All 3 locators failed!
-2026-02-13 21:07:10 [    INFO] [login_page.py:129] ❌ User is not logged in (Logout link not found)
-2026-02-13 21:07:10 [    INFO] [test_login.py:117] ✅ TEST PASSED: Logout successful
-2026-02-13 21:07:10 [    INFO] [test_login.py:118] ############################################################
+2026-02-13 23:00:41 [   ERROR] [base_page.py:56] 🚫 All 3 locators failed!
+2026-02-13 23:00:42 [    INFO] [login_page.py:129] ❌ User is not logged in (Logout link not found)
+2026-02-13 23:00:42 [    INFO] [test_login.py:103] ✅ TEST PASSED: Logout successful
+2026-02-13 23:00:42 [    INFO] [test_login.py:104] ############################################################
 
-2026-02-13 21:07:10 [    INFO] [conftest.py:113] 
+2026-02-13 23:00:42 [    INFO] [conftest.py:113] 
 ================================================================================
-2026-02-13 21:07:10 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
-2026-02-13 21:07:10 [    INFO] [conftest.py:115] ================================================================================
-2026-02-13 21:07:10 [    INFO] [conftest.py:122] ✅ Browser closed successfully
-2026-02-13 21:07:10 [    INFO] [conftest.py:82] 
-================================================================================
-2026-02-13 21:07:10 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
-2026-02-13 21:07:10 [    INFO] [conftest.py:84] ================================================================================
-2026-02-13 21:07:10 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
-2026-02-13 21:07:12 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
-2026-02-13 21:07:12 [    INFO] [test_login_and_shop.py:33] 
-############################################################
-2026-02-13 21:07:12 [    INFO] [test_login_and_shop.py:34] 🚀 TEST: Login + Search + Add + Verify
-2026-02-13 21:07:12 [    INFO] [test_login_and_shop.py:35] ############################################################
-2026-02-13 21:07:12 [    INFO] [test_login_and_shop.py:43] 
-============================================================
-2026-02-13 21:07:12 [    INFO] [test_login_and_shop.py:44] 🔐 STEP 1: Login
-2026-02-13 21:07:12 [    INFO] [test_login_and_shop.py:45] ============================================================
-2026-02-13 21:07:12 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com
-2026-02-13 21:07:16 [    INFO] [home_page.py:40] 🏠 Navigated to Home Page
-2026-02-13 21:07:16 [    INFO] [home_page.py:53] 🔐 Clicking Login link
-2026-02-13 21:07:16 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
-2026-02-13 21:07:16 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/login"]
-2026-02-13 21:07:17 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:17 [    INFO] [login_page.py:68] 🔐 Attempting login with email: hagai.tregerman@gmail.com
-2026-02-13 21:07:17 [    INFO] [login_page.py:71] 📧 Entering email...
-2026-02-13 21:07:17 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
-2026-02-13 21:07:17 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-email"]
-2026-02-13 21:07:17 [    INFO] [base_page.py:73] ⌨️ Typed text: 'hagai.tregerman@gmail.com'
-2026-02-13 21:07:17 [    INFO] [login_page.py:75] 🔒 Entering password...
-2026-02-13 21:07:17 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
-2026-02-13 21:07:17 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=input[data-qa="login-password"]
-2026-02-13 21:07:18 [    INFO] [base_page.py:73] ⌨️ Typed text: 'KMsuTYNyY@Q5y'
-2026-02-13 21:07:18 [    INFO] [login_page.py:81] 📸 Screenshot saved: before_login_1771009638.png
-2026-02-13 21:07:18 [    INFO] [login_page.py:84] 🖱️ Clicking Login button...
-2026-02-13 21:07:18 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
-2026-02-13 21:07:18 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=button[data-qa="login-button"]
-2026-02-13 21:07:19 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:21 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
-2026-02-13 21:07:21 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/logout"]
-2026-02-13 21:07:21 [    INFO] [login_page.py:126] ✅ User is logged in (Logout link visible)
-2026-02-13 21:07:21 [    INFO] [login_page.py:92] ✅ Login successful!
-2026-02-13 21:07:22 [    INFO] [login_page.py:96] 📸 Screenshot saved: after_login_1771009638.png
-2026-02-13 21:07:22 [    INFO] [test_login_and_shop.py:55] ✅ Step 1 Complete: Logged in successfully
-2026-02-13 21:07:22 [    INFO] [test_login_and_shop.py:58] 
-============================================================
-2026-02-13 21:07:22 [    INFO] [test_login_and_shop.py:59] 🛍️ STEP 2: Search and Add to Cart
-2026-02-13 21:07:22 [    INFO] [test_login_and_shop.py:60] ============================================================
-2026-02-13 21:07:22 [    INFO] [home_page.py:45] 🛍️ Clicking Products link
-2026-02-13 21:07:22 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
-2026-02-13 21:07:22 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/products"]
-2026-02-13 21:07:22 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:23 [    INFO] [home_page.py:48] ✅ On Products page
-2026-02-13 21:07:23 [    INFO] [products_page.py:62] 🔍 Searching for: 'tshirt'
-2026-02-13 21:07:23 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: #search_product
-2026-02-13 21:07:23 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=#search_product
-2026-02-13 21:07:23 [    INFO] [base_page.py:73] ⌨️ Typed text: 'tshirt'
-2026-02-13 21:07:23 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: #submit_search
-2026-02-13 21:07:23 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=#submit_search
-2026-02-13 21:07:24 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:28 [    INFO] [products_page.py:66] ✅ Search completed for 'tshirt'
-2026-02-13 21:07:28 [    INFO] [products_page.py:99] 💰 Filtering and adding products under Rs. 1500, limit: 3
-2026-02-13 21:07:28 [    INFO] [products_page.py:106] 📦 Found 6 total products
-2026-02-13 21:07:28 [    INFO] [products_page.py:118]    Product 1: Price = Rs. 400.0
-2026-02-13 21:07:28 [    INFO] [products_page.py:129]    ✅ Adding: Men Tshirt - Rs. 400.0
-2026-02-13 21:07:28 [    INFO] [products_page.py:132]    🖱️ Hovering over product...
-2026-02-13 21:07:29 [    INFO] [products_page.py:143]    🛒 Clicking 'Add to cart'...
-2026-02-13 21:07:30 [    INFO] [products_page.py:178] 🔍 Checking for modal...
-2026-02-13 21:07:31 [    INFO] [products_page.py:182] ✅ Modal closed
-2026-02-13 21:07:31 [    INFO] [products_page.py:157]    ✅ Added to cart (1/3)
-2026-02-13 21:07:31 [    INFO] [products_page.py:118]    Product 2: Price = Rs. 1299.0
-2026-02-13 21:07:31 [    INFO] [products_page.py:129]    ✅ Adding: Pure Cotton V-Neck T-Shirt - Rs. 1299.0
-2026-02-13 21:07:31 [    INFO] [products_page.py:132]    🖱️ Hovering over product...
-2026-02-13 21:07:31 [    INFO] [products_page.py:143]    🛒 Clicking 'Add to cart'...
-2026-02-13 21:07:33 [    INFO] [products_page.py:178] 🔍 Checking for modal...
-2026-02-13 21:07:34 [    INFO] [products_page.py:182] ✅ Modal closed
-2026-02-13 21:07:34 [    INFO] [products_page.py:157]    ✅ Added to cart (2/3)
-2026-02-13 21:07:34 [    INFO] [products_page.py:118]    Product 3: Price = Rs. 1000.0
-2026-02-13 21:07:34 [    INFO] [products_page.py:129]    ✅ Adding: Green Side Placket Detail T-Shirt - Rs. 1000.0
-2026-02-13 21:07:34 [    INFO] [products_page.py:132]    🖱️ Hovering over product...
-2026-02-13 21:07:35 [    INFO] [products_page.py:143]    🛒 Clicking 'Add to cart'...
-2026-02-13 21:07:36 [    INFO] [products_page.py:178] 🔍 Checking for modal...
-2026-02-13 21:07:37 [    INFO] [products_page.py:182] ✅ Modal closed
-2026-02-13 21:07:37 [    INFO] [products_page.py:157]    ✅ Added to cart (3/3)
-2026-02-13 21:07:37 [    INFO] [products_page.py:166] ✅ Successfully added 3 products to cart
-2026-02-13 21:07:37 [    INFO] [test_login_and_shop.py:73] ✅ Step 2 Complete: Added 3 items
-2026-02-13 21:07:37 [    INFO] [test_login_and_shop.py:76] 
-============================================================
-2026-02-13 21:07:37 [    INFO] [test_login_and_shop.py:77] 💰 STEP 3: Verify Cart Total
-2026-02-13 21:07:37 [    INFO] [test_login_and_shop.py:78] ============================================================
-2026-02-13 21:07:37 [    INFO] [home_page.py:59] 🛒 Clicking Cart link
-2026-02-13 21:07:37 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: xpath, Value: //header//a[@href="/view_cart"]
-2026-02-13 21:07:37 [    INFO] [base_page.py:50] ✅ Success with locator 1: xpath=//header//a[@href="/view_cart"]
-2026-02-13 21:07:37 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:38 [    INFO] [home_page.py:62] ✅ On Cart page
-2026-02-13 21:07:38 [    INFO] [cart_page.py:174] 🔍 Verifying cart total...
-2026-02-13 21:07:38 [    INFO] [cart_page.py:175]    Budget per item: Rs. 1500
-2026-02-13 21:07:38 [    INFO] [cart_page.py:176]    Items count: 3
-2026-02-13 21:07:38 [    INFO] [cart_page.py:180]    Threshold: Rs. 4500
-2026-02-13 21:07:38 [    INFO] [cart_page.py:103] 📋 Processing 3 cart items
-2026-02-13 21:07:38 [    INFO] [cart_page.py:133]    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
-2026-02-13 21:07:38 [    INFO] [cart_page.py:133]    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
-2026-02-13 21:07:38 [    INFO] [cart_page.py:133]    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
-2026-02-13 21:07:38 [    INFO] [cart_page.py:156] 💰 Calculated cart total: Rs. 2699.0
-2026-02-13 21:07:38 [    INFO] [cart_page.py:184]    Actual total: Rs. 2699.0
-2026-02-13 21:07:38 [    INFO] [cart_page.py:190] 📸 Screenshot saved: screenshots/cart_verification_1771009658.png
-2026-02-13 21:07:38 [    INFO] [cart_page.py:194] ✅ PASS: Cart total Rs. 2699.0 is within budget Rs. 4500
-2026-02-13 21:07:38 [    INFO] [test_login_and_shop.py:89] ✅ Step 3 Complete: Cart verified
-2026-02-13 21:07:38 [    INFO] [test_login_and_shop.py:91] 
-############################################################
-2026-02-13 21:07:38 [    INFO] [test_login_and_shop.py:92] 🎉 TEST PASSED: Complete authenticated flow!
-2026-02-13 21:07:38 [    INFO] [test_login_and_shop.py:93] ############################################################
-
-2026-02-13 21:07:38 [    INFO] [conftest.py:113] 
-================================================================================
-2026-02-13 21:07:38 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
-2026-02-13 21:07:38 [    INFO] [conftest.py:115] ================================================================================
-2026-02-13 21:07:39 [    INFO] [conftest.py:122] ✅ Browser closed successfully
-2026-02-13 21:07:39 [    INFO] [conftest.py:82] 
-================================================================================
-2026-02-13 21:07:39 [    INFO] [conftest.py:83] 🚀 Starting Browser Session
-2026-02-13 21:07:39 [    INFO] [conftest.py:84] ================================================================================
-2026-02-13 21:07:39 [   DEBUG] [proactor_events.py:633] Using proactor: IocpProactor
-2026-02-13 21:07:40 [    INFO] [conftest.py:108] ✅ Browser launched successfully (MAXIMIZED)
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:121] 
-############################################################
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:122] 🚀 TEST: search_tshirt_under_budget
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:123] ############################################################
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:40] 
-============================================================
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:41] 🔍 FUNCTION 1: Search and Add Items to Cart
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:42]    Query: 'tshirt' | Max Price: Rs. 1500 | Limit: 3
-2026-02-13 21:07:40 [    INFO] [test_shopping.py:43] ============================================================
-2026-02-13 21:07:40 [    INFO] [base_page.py:86] 🌐 Navigating to: https://automationexercise.com
-2026-02-13 21:07:44 [    INFO] [home_page.py:40] 🏠 Navigated to Home Page
-2026-02-13 21:07:44 [    INFO] [home_page.py:45] 🛍️ Clicking Products link
-2026-02-13 21:07:44 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
-2026-02-13 21:07:44 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=a[href="/products"]
-2026-02-13 21:07:44 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:48 [    INFO] [home_page.py:48] ✅ On Products page
-2026-02-13 21:07:48 [    INFO] [products_page.py:62] 🔍 Searching for: 'tshirt'
-2026-02-13 21:07:48 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: #search_product
-2026-02-13 21:07:48 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=#search_product
-2026-02-13 21:07:49 [    INFO] [base_page.py:73] ⌨️ Typed text: 'tshirt'
-2026-02-13 21:07:49 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: css, Value: #submit_search
-2026-02-13 21:07:49 [    INFO] [base_page.py:50] ✅ Success with locator 1: css=#submit_search
-2026-02-13 21:07:49 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:07:52 [    INFO] [products_page.py:66] ✅ Search completed for 'tshirt'
-2026-02-13 21:07:52 [    INFO] [products_page.py:99] 💰 Filtering and adding products under Rs. 1500, limit: 3
-2026-02-13 21:07:52 [    INFO] [products_page.py:106] 📦 Found 6 total products
-2026-02-13 21:07:52 [    INFO] [products_page.py:118]    Product 1: Price = Rs. 400.0
-2026-02-13 21:07:52 [    INFO] [products_page.py:129]    ✅ Adding: Men Tshirt - Rs. 400.0
-2026-02-13 21:07:52 [    INFO] [products_page.py:132]    🖱️ Hovering over product...
-2026-02-13 21:07:52 [    INFO] [products_page.py:143]    🛒 Clicking 'Add to cart'...
-2026-02-13 21:07:54 [    INFO] [products_page.py:178] 🔍 Checking for modal...
-2026-02-13 21:07:55 [    INFO] [products_page.py:182] ✅ Modal closed
-2026-02-13 21:07:55 [    INFO] [products_page.py:157]    ✅ Added to cart (1/3)
-2026-02-13 21:07:55 [    INFO] [products_page.py:118]    Product 2: Price = Rs. 1299.0
-2026-02-13 21:07:55 [    INFO] [products_page.py:129]    ✅ Adding: Pure Cotton V-Neck T-Shirt - Rs. 1299.0
-2026-02-13 21:07:55 [    INFO] [products_page.py:132]    🖱️ Hovering over product...
-2026-02-13 21:07:55 [    INFO] [products_page.py:143]    🛒 Clicking 'Add to cart'...
-2026-02-13 21:07:57 [    INFO] [products_page.py:178] 🔍 Checking for modal...
-2026-02-13 21:07:58 [    INFO] [products_page.py:182] ✅ Modal closed
-2026-02-13 21:07:58 [    INFO] [products_page.py:157]    ✅ Added to cart (2/3)
-2026-02-13 21:07:58 [    INFO] [products_page.py:118]    Product 3: Price = Rs. 1000.0
-2026-02-13 21:07:58 [    INFO] [products_page.py:129]    ✅ Adding: Green Side Placket Detail T-Shirt - Rs. 1000.0
-2026-02-13 21:07:58 [    INFO] [products_page.py:132]    🖱️ Hovering over product...
-2026-02-13 21:07:59 [    INFO] [products_page.py:143]    🛒 Clicking 'Add to cart'...
-2026-02-13 21:08:00 [    INFO] [products_page.py:178] 🔍 Checking for modal...
-2026-02-13 21:08:01 [    INFO] [products_page.py:182] ✅ Modal closed
-2026-02-13 21:08:01 [    INFO] [products_page.py:157]    ✅ Added to cart (3/3)
-2026-02-13 21:08:01 [    INFO] [products_page.py:166] ✅ Successfully added 3 products to cart
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:59] ✅ Added 3 products to cart
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:135] ✅ Step 1 Complete: Added 3 items to cart
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:77] 
-============================================================
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:78] ✅ FUNCTION 2: Assert Cart Total Not Exceeds
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:79]    Budget per item: Rs. 1500
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:80]    Items count: 3
-2026-02-13 21:08:01 [    INFO] [test_shopping.py:81] ============================================================
-2026-02-13 21:08:01 [    INFO] [home_page.py:59] 🛒 Clicking Cart link
-2026-02-13 21:08:01 [    INFO] [base_page.py:34] 🔍 Attempt 1/3 - Strategy: xpath, Value: //header//a[@href="/view_cart"]
-2026-02-13 21:08:01 [    INFO] [base_page.py:50] ✅ Success with locator 1: xpath=//header//a[@href="/view_cart"]
-2026-02-13 21:08:02 [    INFO] [base_page.py:66] 🖱️ Clicked element successfully
-2026-02-13 21:08:02 [    INFO] [home_page.py:62] ✅ On Cart page
-2026-02-13 21:08:02 [    INFO] [cart_page.py:174] 🔍 Verifying cart total...
-2026-02-13 21:08:02 [    INFO] [cart_page.py:175]    Budget per item: Rs. 1500
-2026-02-13 21:08:02 [    INFO] [cart_page.py:176]    Items count: 3
-2026-02-13 21:08:02 [    INFO] [cart_page.py:180]    Threshold: Rs. 4500
-2026-02-13 21:08:02 [    INFO] [cart_page.py:103] 📋 Processing 3 cart items
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:156] 💰 Calculated cart total: Rs. 2699.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:184]    Actual total: Rs. 2699.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:190] 📸 Screenshot saved: screenshots/cart_verification_1771009682.png
-2026-02-13 21:08:02 [    INFO] [cart_page.py:194] ✅ PASS: Cart total Rs. 2699.0 is within budget Rs. 4500
-2026-02-13 21:08:02 [    INFO] [cart_page.py:103] 📋 Processing 3 cart items
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
-2026-02-13 21:08:02 [    INFO] [cart_page.py:103] 📋 Processing 3 cart items
-2026-02-13 21:08:02 [    INFO] [cart_page.py:133]    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
-2026-02-13 21:08:03 [    INFO] [cart_page.py:133]    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
-2026-02-13 21:08:03 [    INFO] [cart_page.py:133]    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
-2026-02-13 21:08:03 [    INFO] [cart_page.py:156] 💰 Calculated cart total: Rs. 2699.0
-2026-02-13 21:08:03 [    INFO] [cart_page.py:217] 📊 Cart Summary: 3 items, Total: Rs. 2699.0
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:94] 
-📊 Cart Summary:
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:95]    Items in cart: 3
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:96]    Total amount: Rs. 2699.0
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:97]    Budget limit: Rs. 4500
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:101] ✅ PASSED: Cart total is within budget!
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:139] ✅ Step 2 Complete: Cart total verified
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:141] 
-############################################################
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:142] 🎉 TEST PASSED: search_tshirt_under_budget
-2026-02-13 21:08:03 [    INFO] [test_shopping.py:143] ############################################################
-2026-02-13 21:08:03 [    INFO] [conftest.py:113] 
-================================================================================
-2026-02-13 21:08:03 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
-2026-02-13 21:08:03 [    INFO] [conftest.py:115] ================================================================================
-2026-02-13 21:08:03 [    INFO] [conftest.py:122] ✅ Browser closed successfully
+2026-02-13 23:00:42 [    INFO] [conftest.py:114] 🛑 Closing Browser Session
+2026-02-13 23:00:42 [    INFO] [conftest.py:115] ================================================================================
+2026-02-13 23:00:42 [    INFO] [conftest.py:122] ✅ Browser closed successfully

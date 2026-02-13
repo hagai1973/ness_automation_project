@@ -1,0 +1,131 @@
+2026-02-13 22:31:22,663 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 22:31:22,664 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 22:31:22,665 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 22:31:22,666 - conftest - INFO - 
+================================================================================
+2026-02-13 22:31:22,666 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:31:22,667 - conftest - INFO - ================================================================================
+2026-02-13 22:31:22,672 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:31:24,702 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:31:24,715 - conftest - INFO - 🛒 Checking if cart is empty...
+2026-02-13 22:31:24,730 - pages.base_page - INFO - 🛒 Navigating to Cart page
+2026-02-13 22:31:24,732 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com/view_cart
+2026-02-13 22:31:28,870 - conftest - INFO - ✅ Cart is already empty
+2026-02-13 22:31:28,870 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:31:32,166 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:31:32,168 - test_login_and_shop - INFO - 
+############################################################
+2026-02-13 22:31:32,169 - test_login_and_shop - INFO - 🚀 TEST: Login + Search + Add + Verify
+2026-02-13 22:31:32,169 - test_login_and_shop - INFO - ############################################################
+2026-02-13 22:31:32,170 - test_login_and_shop - INFO - 
+============================================================
+2026-02-13 22:31:32,170 - test_login_and_shop - INFO - 🔐 STEP 1: Login
+2026-02-13 22:31:32,170 - test_login_and_shop - INFO - ============================================================
+2026-02-13 22:31:32,171 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:31:35,422 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 22:31:35,423 - pages.base_page - INFO - 🔐 Clicking Login link
+2026-02-13 22:31:35,424 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 22:31:35,465 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/login"]
+2026-02-13 22:31:36,140 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:31:36,141 - pages.base_page - INFO - 🔐 Attempting login with email: hagai.tregerman@gmail.com
+2026-02-13 22:31:36,141 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 22:31:36,142 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 22:31:36,182 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 22:31:36,511 - pages.base_page - INFO - ⌨️ Typed text: 'hagai.tregerman@gmail.com'
+2026-02-13 22:31:36,512 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 22:31:36,513 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 22:31:36,536 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 22:31:36,867 - pages.base_page - INFO - ⌨️ Typed text: 'KMsuTYNyY@Q5y'
+2026-02-13 22:31:37,040 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771014696.png
+2026-02-13 22:31:37,040 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 22:31:37,041 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 22:31:37,060 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 22:31:38,154 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:31:40,155 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 22:31:40,208 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/logout"]
+2026-02-13 22:31:40,209 - pages.base_page - INFO - ✅ User is logged in (Logout link visible)
+2026-02-13 22:31:40,210 - pages.base_page - INFO - ✅ Login successful!
+2026-02-13 22:31:40,422 - pages.base_page - INFO - 📸 Screenshot saved: after_login_1771014696.png
+2026-02-13 22:31:40,427 - test_login_and_shop - INFO - ✅ Step 1 Complete: Logged in successfully
+2026-02-13 22:31:40,428 - test_login_and_shop - INFO - 
+============================================================
+2026-02-13 22:31:40,429 - test_login_and_shop - INFO - 🛍️ STEP 2: Search and Add to Cart
+2026-02-13 22:31:40,429 - test_login_and_shop - INFO - ============================================================
+2026-02-13 22:31:40,429 - pages.base_page - INFO - 🛍️ Clicking Products link
+2026-02-13 22:31:40,429 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
+2026-02-13 22:31:40,443 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/products"]
+2026-02-13 22:31:41,086 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:31:41,534 - pages.base_page - INFO - ✅ On Products page
+2026-02-13 22:31:41,535 - pages.base_page - INFO - 🔍 Searching for: 'tshirt'
+2026-02-13 22:31:41,535 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #search_product
+2026-02-13 22:31:41,596 - pages.base_page - INFO - ✅ Success with locator 1: css=#search_product
+2026-02-13 22:31:41,919 - pages.base_page - INFO - ⌨️ Typed text: 'tshirt'
+2026-02-13 22:31:41,920 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #submit_search
+2026-02-13 22:31:41,934 - pages.base_page - INFO - ✅ Success with locator 1: css=#submit_search
+2026-02-13 22:31:42,599 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:31:44,940 - pages.base_page - INFO - ✅ Search completed for 'tshirt'
+2026-02-13 22:31:44,941 - pages.base_page - INFO - 💰 Filtering and adding products under Rs. 1500, limit: 3
+2026-02-13 22:31:44,964 - pages.base_page - INFO - 📦 Found 6 total products
+2026-02-13 22:31:44,975 - pages.base_page - INFO -    Product 1: Price = Rs. 400.0
+2026-02-13 22:31:44,984 - pages.base_page - INFO -    ✅ Adding: Men Tshirt - Rs. 400.0
+2026-02-13 22:31:44,984 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 22:31:45,858 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 22:31:47,468 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 22:31:47,860 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 22:31:47,861 - pages.base_page - INFO -    ✅ Added to cart (1/3)
+2026-02-13 22:31:47,869 - pages.base_page - INFO -    Product 2: Price = Rs. 1299.0
+2026-02-13 22:31:47,877 - pages.base_page - INFO -    ✅ Adding: Pure Cotton V-Neck T-Shirt - Rs. 1299.0
+2026-02-13 22:31:47,878 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 22:31:48,750 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 22:31:50,267 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 22:31:50,615 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 22:31:50,617 - pages.base_page - INFO -    ✅ Added to cart (2/3)
+2026-02-13 22:31:50,629 - pages.base_page - INFO -    Product 3: Price = Rs. 1000.0
+2026-02-13 22:31:50,636 - pages.base_page - INFO -    ✅ Adding: Green Side Placket Detail T-Shirt - Rs. 1000.0
+2026-02-13 22:31:50,636 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 22:31:51,491 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 22:31:53,191 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 22:31:53,549 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 22:31:53,550 - pages.base_page - INFO -    ✅ Added to cart (3/3)
+2026-02-13 22:31:53,550 - pages.base_page - INFO - ✅ Successfully added 3 products to cart
+2026-02-13 22:31:53,551 - test_login_and_shop - INFO - ✅ Step 2 Complete: Added 3 items
+2026-02-13 22:31:53,551 - test_login_and_shop - INFO - 
+============================================================
+2026-02-13 22:31:53,551 - test_login_and_shop - INFO - 💰 STEP 3: Verify Cart Total
+2026-02-13 22:31:53,552 - test_login_and_shop - INFO - ============================================================
+2026-02-13 22:31:53,552 - pages.base_page - INFO - 🛒 Clicking Cart link
+2026-02-13 22:31:53,552 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: xpath, Value: //header//a[@href="/view_cart"]
+2026-02-13 22:31:53,563 - pages.base_page - INFO - ✅ Success with locator 1: xpath=//header//a[@href="/view_cart"]
+2026-02-13 22:31:54,354 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 22:31:55,191 - pages.base_page - INFO - ✅ On Cart page
+2026-02-13 22:31:55,192 - pages.base_page - INFO - 🔍 Verifying cart total...
+2026-02-13 22:31:55,192 - pages.base_page - INFO -    Budget per item: Rs. 1500
+2026-02-13 22:31:55,193 - pages.base_page - INFO -    Items count: 3
+2026-02-13 22:31:55,193 - pages.base_page - INFO -    Threshold: Rs. 4500
+2026-02-13 22:31:55,211 - pages.base_page - INFO - 📋 Processing 4 cart items
+2026-02-13 22:31:55,239 - pages.base_page - INFO -    Item 1: Blue Top | Rs. 500.0 x 1 = Rs. 500.0
+2026-02-13 22:31:55,264 - pages.base_page - INFO -    Item 2: Men Tshirt | Rs. 400.0 x 2 = Rs. 800.0
+2026-02-13 22:31:55,308 - pages.base_page - INFO -    Item 3: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 2 = Rs. 2598.0
+2026-02-13 22:31:55,339 - pages.base_page - INFO -    Item 4: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 2 = Rs. 2000.0
+2026-02-13 22:31:55,340 - pages.base_page - INFO - 💰 Calculated cart total: Rs. 5898.0
+2026-02-13 22:31:55,341 - pages.base_page - INFO -    Actual total: Rs. 5898.0
+2026-02-13 22:31:55,508 - pages.base_page - INFO - 📸 Screenshot saved: screenshots/cart_verification_1771014715.png
+2026-02-13 22:31:55,508 - pages.base_page - ERROR - ❌ FAIL: Cart total Rs. 5898.0 exceeds budget Rs. 4500
+2026-02-13 22:31:55,514 - pages.base_page - INFO - 📋 Processing 4 cart items
+2026-02-13 22:31:55,549 - pages.base_page - INFO -    Item 1: Blue Top | Rs. 500.0 x 1 = Rs. 500.0
+2026-02-13 22:31:55,579 - pages.base_page - INFO -    Item 2: Men Tshirt | Rs. 400.0 x 2 = Rs. 800.0
+2026-02-13 22:31:55,606 - pages.base_page - INFO -    Item 3: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 2 = Rs. 2598.0
+2026-02-13 22:31:55,632 - pages.base_page - INFO -    Item 4: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 2 = Rs. 2000.0
+2026-02-13 22:31:55,638 - pages.base_page - INFO - 📋 Processing 4 cart items
+2026-02-13 22:31:55,658 - pages.base_page - INFO -    Item 1: Blue Top | Rs. 500.0 x 1 = Rs. 500.0
+2026-02-13 22:31:55,678 - pages.base_page - INFO -    Item 2: Men Tshirt | Rs. 400.0 x 2 = Rs. 800.0
+2026-02-13 22:31:55,704 - pages.base_page - INFO -    Item 3: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 2 = Rs. 2598.0
+2026-02-13 22:31:55,725 - pages.base_page - INFO -    Item 4: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 2 = Rs. 2000.0
+2026-02-13 22:31:55,726 - pages.base_page - INFO - 💰 Calculated cart total: Rs. 5898.0
+2026-02-13 22:31:55,726 - pages.base_page - INFO - 📊 Cart Summary: 4 items, Total: Rs. 5898.0
+2026-02-13 22:31:55,908 - conftest - ERROR - 📸 Failure screenshot saved: screenshots/FAILED_test_login_search_add_verify_20260213_223155.png
+2026-02-13 22:31:55,911 - conftest - INFO - 
+================================================================================
+2026-02-13 22:31:55,912 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:31:55,912 - conftest - INFO - ================================================================================
+2026-02-13 22:31:56,213 - conftest - INFO - ✅ Browser closed successfully

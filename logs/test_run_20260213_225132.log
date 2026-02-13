@@ -1,0 +1,20 @@
+2026-02-13 22:51:32,907 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 22:51:32,908 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 22:51:32,909 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 22:51:32,909 - conftest - INFO - 
+================================================================================
+2026-02-13 22:51:32,910 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 22:51:32,910 - conftest - INFO - ================================================================================
+2026-02-13 22:51:32,912 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 22:51:34,991 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 22:51:34,994 - test_login - INFO - 
+############################################################
+2026-02-13 22:51:34,995 - test_login - INFO - 🔐 TEST: Successful Login
+2026-02-13 22:51:34,996 - test_login - INFO - ############################################################
+2026-02-13 22:51:34,996 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 22:52:10,766 - conftest - ERROR - 📸 Failure screenshot saved: screenshots/FAILED_test_successful_login_20260213_225209.png
+2026-02-13 22:52:10,774 - conftest - INFO - 
+================================================================================
+2026-02-13 22:52:10,774 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 22:52:10,774 - conftest - INFO - ================================================================================
+2026-02-13 22:52:11,119 - conftest - INFO - ✅ Browser closed successfully
