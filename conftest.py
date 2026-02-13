@@ -14,15 +14,18 @@ from datetime import datetime
 
 # Configure logging
 def setup_logging():
-    """Setup logging configuration"""
+    """Setup logging configuration (worker-safe for parallel execution)"""
     if not os.path.exists('logs'):
-        os.makedirs('logs')
+        os.makedirs('logs', exist_ok=True)
     
-    log_filename = f"logs/test_run_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+    # Include xdist worker ID in log filename to avoid file conflicts
+    worker_id = os.environ.get('PYTEST_XDIST_WORKER', 'master')
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    log_filename = f"logs/test_run_{timestamp}_{worker_id}.log"
     
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        format=f'%(asctime)s - [{worker_id}] %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler(log_filename, encoding='utf-8'),
             logging.StreamHandler()

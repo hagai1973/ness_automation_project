@@ -63,6 +63,7 @@ ness_automation_project/
 | Language         | Python 3.14                    |
 | Test Framework   | Pytest 9.0.2                   |
 | Browser Engine   | Playwright 1.58.0 (Chromium)   |
+| Parallel         | pytest-xdist 3.8.0             |
 | Reporting        | Allure 2.36.0 + allure-pytest  |
 | Design Pattern   | Page Object Model (POM)        |
 | CI/CD Ready      | Git + GitHub                   |
@@ -129,6 +130,26 @@ python run_tests.py --no-report
 python run_tests.py -t login              # Same as --test login
 python run_tests.py -m smoke              # Same as --marker smoke
 ```
+
+### Parallel Execution
+
+Use `--workers` / `-w` to run tests in parallel. Each worker gets its own browser instance:
+
+```bash
+# Run with 2 parallel browsers
+python run_tests.py -w 2
+
+# Run with 3 workers on login tests
+python run_tests.py -t login -w 3
+
+# Auto-detect workers (1 per CPU core)
+python run_tests.py -w auto
+
+# Combine with other flags
+python run_tests.py -t login -w 2 --no-report
+```
+
+> **Note:** Each worker launches a separate Chromium browser. More workers = faster execution, but more memory. Start with 2-3 and increase based on your machine's resources.
 
 **What `run_tests.py` does automatically:**
 

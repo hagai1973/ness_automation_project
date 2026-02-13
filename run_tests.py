@@ -10,6 +10,8 @@ Usage:
     python run_tests.py --no-report         # Run tests without Allure report
     python run_tests.py --headed            # Run with browser visible (default)
     python run_tests.py --headless          # Run in headless mode
+    python run_tests.py --workers 3         # Run tests in parallel (3 workers)
+    python run_tests.py -w auto             # Auto-detect number of workers (1 per CPU)
 """
 
 import subprocess
@@ -84,6 +86,28 @@ def build_pytest_command(args):
     return cmd
 
 
+def build_parallel_args(args):
+    """Build pytest-xdist arguments for parallel execution"""
+    if not args.workers:
+        return []
+    
+    workers = args.workers
+    if workers == "auto":
+        return ["-n", "auto"]
+    
+    try:
+        n = int(workers)
+        if n < 1:
+            print("   ⚠️  Workers must be >= 1, running sequentially")
+            return []
+        if n == 1:
+            return []  # No parallelism needed for single worker
+        return ["-n", str(n)]
+    except ValueError:
+        print(f"   ⚠️  Invalid workers value '{workers}', running sequentially")
+        return []
+
+
 def run_tests(cmd):
     """Execute pytest and return the exit code"""
     print("\n🧪 Running tests...")
@@ -134,6 +158,8 @@ def main():
     parser.add_argument("--no-report", action="store_true", help="Skip Allure report generation")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
     parser.add_argument("--headed", action="store_true", default=True, help="Run browser in headed mode (default)")
+    parser.add_argument("--workers", "-w", default=None,
+                        help="Number of parallel workers (e.g., 2, 3, 'auto'). Default: sequential")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -148,6 +174,10 @@ def main():
 
     # Build and run tests
     cmd = build_pytest_command(args)
+    parallel_args = build_parallel_args(args)
+    if parallel_args:
+        cmd.extend(parallel_args)
+        print(f"\n⚡ Parallel mode: {args.workers} worker(s)")
     exit_code = run_tests(cmd)
 
     # Results summary
