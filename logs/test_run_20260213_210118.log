@@ -1,0 +1,59 @@
+2026-02-13 21:01:18,562 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 21:01:18,563 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 21:01:18,564 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 21:01:18,564 - conftest - INFO - 
+================================================================================
+2026-02-13 21:01:18,564 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 21:01:18,565 - conftest - INFO - ================================================================================
+2026-02-13 21:01:18,566 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 21:01:20,730 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 21:01:20,733 - test_login - INFO - 
+############################################################
+2026-02-13 21:01:20,733 - test_login - INFO - 🔐 TEST: Successful Login
+2026-02-13 21:01:20,734 - test_login - INFO - ############################################################
+2026-02-13 21:01:20,734 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 21:01:25,077 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 21:01:25,078 - pages.base_page - INFO - 🔐 Clicking Login link
+2026-02-13 21:01:25,078 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/login"]
+2026-02-13 21:01:25,134 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/login"]
+2026-02-13 21:01:25,801 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 21:01:25,802 - pages.base_page - INFO - 🔐 Attempting login with email: testuser@example.com
+2026-02-13 21:01:25,804 - pages.base_page - INFO - 📧 Entering email...
+2026-02-13 21:01:25,805 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-email"]
+2026-02-13 21:01:25,842 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-email"]
+2026-02-13 21:01:26,166 - pages.base_page - INFO - ⌨️ Typed text: 'testuser@example.com'
+2026-02-13 21:01:26,167 - pages.base_page - INFO - 🔒 Entering password...
+2026-02-13 21:01:26,167 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: input[data-qa="login-password"]
+2026-02-13 21:01:26,179 - pages.base_page - INFO - ✅ Success with locator 1: css=input[data-qa="login-password"]
+2026-02-13 21:01:26,504 - pages.base_page - INFO - ⌨️ Typed text: 'TestPassword123'
+2026-02-13 21:01:26,816 - pages.base_page - INFO - 📸 Screenshot saved: before_login_1771009286.png
+2026-02-13 21:01:26,817 - pages.base_page - INFO - 🖱️ Clicking Login button...
+2026-02-13 21:01:26,817 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: button[data-qa="login-button"]
+2026-02-13 21:01:26,829 - pages.base_page - INFO - ✅ Success with locator 1: css=button[data-qa="login-button"]
+2026-02-13 21:01:27,459 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 21:01:29,460 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/logout"]
+2026-02-13 21:01:32,478 - pages.base_page - WARNING - ❌ Locator 1 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("a[href=\"/logout\"]") to be visible
+
+2026-02-13 21:01:32,479 - pages.base_page - INFO - 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(text(), "Logout")]
+2026-02-13 21:01:35,487 - pages.base_page - WARNING - ❌ Locator 2 failed: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("//a[contains(text(), \"Logout\")]") to be visible
+
+2026-02-13 21:01:35,488 - pages.base_page - INFO - 🔍 Attempt 3/3 - Strategy: xpath, Value: //li/a[@href="/logout"]
+2026-02-13 21:01:36,095 - pages.base_page - INFO - ❌ User is not logged in (Logout link not found)
+2026-02-13 21:01:36,096 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: p[style*="color: red"]
+2026-02-13 21:01:36,321 - pages.base_page - ERROR - ❌ Login failed: Unknown error
+2026-02-13 21:03:29,374 - conftest - INFO - 
+================================================================================
+2026-02-13 21:03:29,374 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 21:03:29,375 - conftest - INFO - ================================================================================
+2026-02-13 21:03:32,951 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-22' coro=<Locator.wait_for() running at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_locator.py:705> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-02-13 21:03:32,952 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-23' coro=<Page.screenshot() running at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_page.py:781> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-02-13 21:03:32,952 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-24' coro=<Page.close() running at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_page.py:826> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-02-13 21:03:32,954 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-21' coro=<Locator.wait_for() running at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_locator.py:710> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_sync_base.py:111, ProtocolCallback.__init__.<locals>.cb() at C:\Users\hagai\ness_automation_project\venv\Lib\site-packages\playwright\_impl\_connection.py:230]>

@@ -4,14 +4,20 @@
     {
       "test_name": "search_tshirt_under_budget",
       "search_query": "tshirt",
-      "max_price": 500,
-      "items_limit": 5
+      "max_price": 1500,
+      "items_limit": 3
     },
     {
       "test_name": "search_dress_under_budget",
       "search_query": "dress",
-      "max_price": 1000,
+      "max_price": 2000,
       "items_limit": 3
+    },
+    {
+      "test_name": "search_top_under_budget",
+      "search_query": "top",
+      "max_price": 1000,
+      "items_limit": 2
     }
   ],
   "user_credentials": {

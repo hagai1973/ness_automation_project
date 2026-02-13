@@ -1,0 +1,108 @@
+2026-02-13 20:03:50,551 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 20:03:50,551 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 20:03:50,552 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 20:03:50,552 - conftest - INFO - 
+================================================================================
+2026-02-13 20:03:50,553 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 20:03:50,553 - conftest - INFO - ================================================================================
+2026-02-13 20:03:50,555 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 20:03:52,513 - conftest - INFO - ✅ Browser launched successfully (MAXIMIZED)
+2026-02-13 20:03:52,514 - test_shopping - INFO - 
+############################################################
+2026-02-13 20:03:52,515 - test_shopping - INFO - 🚀 TEST: search_tshirt_under_budget
+2026-02-13 20:03:52,515 - test_shopping - INFO - ############################################################
+2026-02-13 20:03:52,516 - test_shopping - INFO - 
+============================================================
+2026-02-13 20:03:52,516 - test_shopping - INFO - 🔍 FUNCTION 1: Search and Add Items to Cart
+2026-02-13 20:03:52,516 - test_shopping - INFO -    Query: 'tshirt' | Max Price: Rs. 1500 | Limit: 3
+2026-02-13 20:03:52,516 - test_shopping - INFO - ============================================================
+2026-02-13 20:03:52,517 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 20:03:56,618 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 20:03:56,619 - pages.base_page - INFO - 🛍️ Clicking Products link
+2026-02-13 20:03:56,620 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
+2026-02-13 20:03:56,684 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/products"]
+2026-02-13 20:03:57,069 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 20:04:01,149 - pages.base_page - INFO - ✅ On Products page
+2026-02-13 20:04:01,150 - pages.base_page - INFO - 🔍 Searching for: 'tshirt'
+2026-02-13 20:04:01,150 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #search_product
+2026-02-13 20:04:01,189 - pages.base_page - INFO - ✅ Success with locator 1: css=#search_product
+2026-02-13 20:04:01,516 - pages.base_page - INFO - ⌨️ Typed text: 'tshirt'
+2026-02-13 20:04:01,517 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #submit_search
+2026-02-13 20:04:01,534 - pages.base_page - INFO - ✅ Success with locator 1: css=#submit_search
+2026-02-13 20:04:02,200 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 20:04:04,265 - pages.base_page - INFO - ✅ Search completed for 'tshirt'
+2026-02-13 20:04:04,266 - pages.base_page - INFO - 💰 Filtering and adding products under Rs. 1500, limit: 3
+2026-02-13 20:04:04,286 - pages.base_page - INFO - 📦 Found 6 total products
+2026-02-13 20:04:04,302 - pages.base_page - INFO -    Product 1: Price = Rs. 400.0
+2026-02-13 20:04:04,312 - pages.base_page - INFO -    ✅ Adding: Men Tshirt - Rs. 400.0
+2026-02-13 20:04:04,312 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 20:04:05,189 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 20:04:06,933 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 20:04:07,321 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 20:04:07,322 - pages.base_page - INFO -    ✅ Added to cart (1/3)
+2026-02-13 20:04:07,333 - pages.base_page - INFO -    Product 2: Price = Rs. 1299.0
+2026-02-13 20:04:07,343 - pages.base_page - INFO -    ✅ Adding: Pure Cotton V-Neck T-Shirt - Rs. 1299.0
+2026-02-13 20:04:07,343 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 20:04:08,219 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 20:04:10,080 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 20:04:10,443 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 20:04:10,444 - pages.base_page - INFO -    ✅ Added to cart (2/3)
+2026-02-13 20:04:10,454 - pages.base_page - INFO -    Product 3: Price = Rs. 1000.0
+2026-02-13 20:04:10,461 - pages.base_page - INFO -    ✅ Adding: Green Side Placket Detail T-Shirt - Rs. 1000.0
+2026-02-13 20:04:10,461 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 20:04:11,334 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 20:04:13,196 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 20:04:13,554 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 20:04:13,555 - pages.base_page - INFO -    ✅ Added to cart (3/3)
+2026-02-13 20:04:13,555 - pages.base_page - INFO - ✅ Successfully added 3 products to cart
+2026-02-13 20:04:13,556 - test_shopping - INFO - ✅ Added 3 products to cart
+2026-02-13 20:04:13,556 - test_shopping - INFO - ✅ Step 1 Complete: Added 3 items to cart
+2026-02-13 20:04:13,557 - test_shopping - INFO - 
+============================================================
+2026-02-13 20:04:13,557 - test_shopping - INFO - ✅ FUNCTION 2: Assert Cart Total Not Exceeds
+2026-02-13 20:04:13,558 - test_shopping - INFO -    Budget per item: Rs. 1500
+2026-02-13 20:04:13,558 - test_shopping - INFO -    Items count: 3
+2026-02-13 20:04:13,559 - test_shopping - INFO - ============================================================
+2026-02-13 20:04:13,559 - pages.base_page - INFO - 🛒 Clicking Cart link
+2026-02-13 20:04:13,560 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: xpath, Value: //header//a[@href="/view_cart"]
+2026-02-13 20:04:13,579 - pages.base_page - INFO - ✅ Success with locator 1: xpath=//header//a[@href="/view_cart"]
+2026-02-13 20:04:14,234 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 20:04:14,766 - pages.base_page - INFO - ✅ On Cart page
+2026-02-13 20:04:14,766 - pages.base_page - INFO - 🔍 Verifying cart total...
+2026-02-13 20:04:14,767 - pages.base_page - INFO -    Budget per item: Rs. 1500
+2026-02-13 20:04:14,767 - pages.base_page - INFO -    Items count: 3
+2026-02-13 20:04:14,767 - pages.base_page - INFO -    Threshold: Rs. 4500
+2026-02-13 20:04:14,784 - pages.base_page - INFO - 📋 Processing 3 cart items
+2026-02-13 20:04:14,814 - pages.base_page - INFO -    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
+2026-02-13 20:04:14,838 - pages.base_page - INFO -    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
+2026-02-13 20:04:14,862 - pages.base_page - INFO -    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
+2026-02-13 20:04:14,868 - pages.base_page - INFO - 💰 Calculated cart total: Rs. 2699.0
+2026-02-13 20:04:14,868 - pages.base_page - INFO -    Actual total: Rs. 2699.0
+2026-02-13 20:04:14,999 - pages.base_page - INFO - 📸 Screenshot saved: screenshots/cart_verification_1771005854.png
+2026-02-13 20:04:15,001 - pages.base_page - INFO - ✅ PASS: Cart total Rs. 2699.0 is within budget Rs. 4500
+2026-02-13 20:04:15,008 - pages.base_page - INFO - 📋 Processing 3 cart items
+2026-02-13 20:04:15,037 - pages.base_page - INFO -    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
+2026-02-13 20:04:15,064 - pages.base_page - INFO -    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
+2026-02-13 20:04:15,087 - pages.base_page - INFO -    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
+2026-02-13 20:04:15,092 - pages.base_page - INFO - 📋 Processing 3 cart items
+2026-02-13 20:04:15,114 - pages.base_page - INFO -    Item 1: Men Tshirt | Rs. 400.0 x 1 = Rs. 400.0
+2026-02-13 20:04:15,135 - pages.base_page - INFO -    Item 2: Pure Cotton V-Neck T-Shirt | Rs. 1299.0 x 1 = Rs. 1299.0
+2026-02-13 20:04:15,157 - pages.base_page - INFO -    Item 3: Green Side Placket Detail T-Shirt | Rs. 1000.0 x 1 = Rs. 1000.0
+2026-02-13 20:04:15,157 - pages.base_page - INFO - 💰 Calculated cart total: Rs. 2699.0
+2026-02-13 20:04:15,158 - pages.base_page - INFO - 📊 Cart Summary: 3 items, Total: Rs. 2699.0
+2026-02-13 20:04:15,158 - test_shopping - INFO - 
+📊 Cart Summary:
+2026-02-13 20:04:15,158 - test_shopping - INFO -    Items in cart: 3
+2026-02-13 20:04:15,159 - test_shopping - INFO -    Total amount: Rs. 2699.0
+2026-02-13 20:04:15,159 - test_shopping - INFO -    Budget limit: Rs. 4500
+2026-02-13 20:04:15,159 - test_shopping - INFO - ✅ PASSED: Cart total is within budget!
+2026-02-13 20:04:15,159 - test_shopping - INFO - ✅ Step 2 Complete: Cart total verified
+2026-02-13 20:04:15,159 - test_shopping - INFO - 
+############################################################
+2026-02-13 20:04:15,160 - test_shopping - INFO - 🎉 TEST PASSED: search_tshirt_under_budget
+2026-02-13 20:04:15,160 - test_shopping - INFO - ############################################################
+2026-02-13 20:04:15,161 - conftest - INFO - 
+================================================================================
+2026-02-13 20:04:15,161 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 20:04:15,161 - conftest - INFO - ================================================================================
+2026-02-13 20:04:15,450 - conftest - INFO - ✅ Browser closed successfully

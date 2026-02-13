@@ -1,0 +1,106 @@
+2026-02-13 19:55:50,637 - conftest - INFO - 📂 Loading test data from: C:\Users\hagai\ness_automation_project\data\search_data.json
+2026-02-13 19:55:50,639 - conftest - INFO - ✅ Test data loaded: 3 scenarios
+2026-02-13 19:55:50,640 - conftest - INFO - 🌐 Base URL: https://automationexercise.com
+2026-02-13 19:55:50,641 - conftest - INFO - 
+================================================================================
+2026-02-13 19:55:50,641 - conftest - INFO - 🚀 Starting Browser Session
+2026-02-13 19:55:50,641 - conftest - INFO - ================================================================================
+2026-02-13 19:55:50,642 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-02-13 19:55:54,066 - conftest - INFO - ✅ Browser launched successfully
+2026-02-13 19:55:54,067 - test_shopping - INFO - 
+############################################################
+2026-02-13 19:55:54,068 - test_shopping - INFO - 🚀 TEST: search_tshirt_under_budget
+2026-02-13 19:55:54,068 - test_shopping - INFO - ############################################################
+2026-02-13 19:55:54,069 - test_shopping - INFO - 
+============================================================
+2026-02-13 19:55:54,069 - test_shopping - INFO - 🔍 FUNCTION 1: Search and Add Items to Cart
+2026-02-13 19:55:54,069 - test_shopping - INFO -    Query: 'tshirt' | Max Price: Rs. 1500 | Limit: 3
+2026-02-13 19:55:54,069 - test_shopping - INFO - ============================================================
+2026-02-13 19:55:54,070 - pages.base_page - INFO - 🌐 Navigating to: https://automationexercise.com
+2026-02-13 19:55:57,982 - pages.base_page - INFO - 🏠 Navigated to Home Page
+2026-02-13 19:55:57,982 - pages.base_page - INFO - 🛍️ Clicking Products link
+2026-02-13 19:55:57,982 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/products"]
+2026-02-13 19:55:58,046 - pages.base_page - INFO - ✅ Success with locator 1: css=a[href="/products"]
+2026-02-13 19:55:58,950 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 19:55:59,794 - pages.base_page - INFO - ✅ On Products page
+2026-02-13 19:55:59,795 - pages.base_page - INFO - 🔍 Searching for: 'tshirt'
+2026-02-13 19:55:59,796 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #search_product
+2026-02-13 19:55:59,835 - pages.base_page - INFO - ✅ Success with locator 1: css=#search_product
+2026-02-13 19:56:00,366 - pages.base_page - INFO - ⌨️ Typed text: 'tshirt'
+2026-02-13 19:56:00,367 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: #submit_search
+2026-02-13 19:56:00,380 - pages.base_page - INFO - ✅ Success with locator 1: css=#submit_search
+2026-02-13 19:56:01,254 - pages.base_page - INFO - 🖱️ Clicked element successfully
+2026-02-13 19:56:05,673 - pages.base_page - INFO - ✅ Search completed for 'tshirt'
+2026-02-13 19:56:05,674 - pages.base_page - INFO - 💰 Filtering and adding products under Rs. 1500, limit: 3
+2026-02-13 19:56:05,694 - pages.base_page - INFO - 📦 Found 6 total products
+2026-02-13 19:56:05,705 - pages.base_page - INFO -    Product 1: Price = Rs. 400.0
+2026-02-13 19:56:05,713 - pages.base_page - INFO -    ✅ Adding: Men Tshirt - Rs. 400.0
+2026-02-13 19:56:05,714 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 19:56:06,826 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 19:56:08,763 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 19:56:09,306 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 19:56:09,307 - pages.base_page - INFO -    ✅ Added to cart (1/3)
+2026-02-13 19:56:09,316 - pages.base_page - INFO -    Product 2: Price = Rs. 1299.0
+2026-02-13 19:56:09,324 - pages.base_page - INFO -    ✅ Adding: Pure Cotton V-Neck T-Shirt - Rs. 1299.0
+2026-02-13 19:56:09,325 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 19:56:10,395 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 19:56:12,224 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 19:56:12,790 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 19:56:12,791 - pages.base_page - INFO -    ✅ Added to cart (2/3)
+2026-02-13 19:56:12,803 - pages.base_page - INFO -    Product 3: Price = Rs. 1000.0
+2026-02-13 19:56:12,811 - pages.base_page - INFO -    ✅ Adding: Green Side Placket Detail T-Shirt - Rs. 1000.0
+2026-02-13 19:56:12,812 - pages.base_page - INFO -    🖱️ Hovering over product...
+2026-02-13 19:56:13,879 - pages.base_page - INFO -    🛒 Clicking 'Add to cart'...
+2026-02-13 19:56:16,136 - pages.base_page - INFO - 🔍 Checking for modal...
+2026-02-13 19:56:16,712 - pages.base_page - INFO - ✅ Modal closed
+2026-02-13 19:56:16,713 - pages.base_page - INFO -    ✅ Added to cart (3/3)
+2026-02-13 19:56:16,713 - pages.base_page - INFO - ✅ Successfully added 3 products to cart
+2026-02-13 19:56:16,714 - test_shopping - INFO - ✅ Added 3 products to cart
+2026-02-13 19:56:16,714 - test_shopping - INFO - ✅ Step 1 Complete: Added 3 items to cart
+2026-02-13 19:56:16,715 - test_shopping - INFO - 
+============================================================
+2026-02-13 19:56:16,715 - test_shopping - INFO - ✅ FUNCTION 2: Assert Cart Total Not Exceeds
+2026-02-13 19:56:16,715 - test_shopping - INFO -    Budget per item: Rs. 1500
+2026-02-13 19:56:16,716 - test_shopping - INFO -    Items count: 3
+2026-02-13 19:56:16,716 - test_shopping - INFO - ============================================================
+2026-02-13 19:56:16,716 - pages.base_page - INFO - 🛒 Clicking Cart link
+2026-02-13 19:56:16,717 - pages.base_page - INFO - 🔍 Attempt 1/3 - Strategy: css, Value: a[href="/view_cart"]
+2026-02-13 19:56:16,781 - pages.base_page - WARNING - ❌ Locator 1 failed: Locator.wait_for: Error: strict mode violation: locator("a[href=\"/view_cart\"]") resolved to 2 elements:
+    1) <a href="/view_cart">…</a> aka get_by_role("link", name=" Cart")
+    2) <a href="/view_cart">…</a> aka locator("a").filter(has_text="View Cart")
+
+Call log:
+  - waiting for locator("a[href=\"/view_cart\"]") to be visible
+
+2026-02-13 19:56:16,782 - pages.base_page - INFO - 🔍 Attempt 2/3 - Strategy: xpath, Value: //a[contains(@href, "cart")]
+2026-02-13 19:56:16,811 - pages.base_page - WARNING - ❌ Locator 2 failed: Locator.wait_for: Error: strict mode violation: locator("//a[contains(@href, \"cart\")]") resolved to 2 elements:
+    1) <a href="/view_cart">…</a> aka get_by_role("link", name=" Cart")
+    2) <a href="/view_cart">…</a> aka locator("a").filter(has_text="View Cart")
+
+Call log:
+  - waiting for locator("//a[contains(@href, \"cart\")]") to be visible
+
+2026-02-13 19:56:16,812 - pages.base_page - INFO - 🔍 Attempt 3/3 - Strategy: text, Value: Cart
+2026-02-13 19:56:16,895 - pages.base_page - WARNING - ❌ Locator 3 failed: Locator.wait_for: Error: strict mode violation: get_by_text("Cart") resolved to 15 elements:
+    1) <a href="/view_cart">…</a> aka get_by_role("link", name=" Cart")
+    2) <p class="text-center">Your product has been added to cart.</p> aka get_by_text("Your product has been added")
+    3) <u>View Cart</u> aka get_by_text("View Cart")
+    4) <a data-product-id="2" class="btn btn-default add-to-cart">…</a> aka get_by_text("Add to cart").first
+    5) <a data-product-id="2" class="btn btn-default add-to-cart">…</a> aka get_by_text("Add to cart").nth(1)
+    6) <a data-product-id="28" class="btn btn-default add-to-cart">…</a> aka get_by_text("Add to cart").nth(2)
+    7) <a data-product-id="28" class="btn btn-default add-to-cart">…</a> aka get_by_text("Add to cart").nth(3)
+    8) <a data-product-id="29" class="btn btn-default add-to-cart">…</a> aka get_by_text("Add to cart").nth(4)
+    9) <a data-product-id="29" class="btn btn-default add-to-cart">…</a> aka get_by_text("Add to cart").nth(5)
+    10) <a data-product-id="30" class="btn btn-default add-to-cart">…</a> aka locator("div:nth-child(6) > .product-image-wrapper > .single-products > .productinfo > .btn")
+    ...
+
+Call log:
+  - waiting for get_by_text("Cart") to be visible
+
+2026-02-13 19:56:16,901 - pages.base_page - ERROR - 🚫 All 3 locators failed!
+2026-02-13 19:56:17,983 - conftest - ERROR - 📸 Failure screenshot saved: screenshots/FAILED_test_search_and_add_items_under_budget_20260213_195617.png
+2026-02-13 19:56:17,984 - conftest - INFO - 
+================================================================================
+2026-02-13 19:56:17,985 - conftest - INFO - 🛑 Closing Browser Session
+2026-02-13 19:56:17,985 - conftest - INFO - ================================================================================
+2026-02-13 19:56:18,432 - conftest - INFO - ✅ Browser closed successfully

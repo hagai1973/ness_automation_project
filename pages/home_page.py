@@ -23,9 +23,9 @@ class HomePage(BasePage):
     ]
     
     CART_LINK: List[Tuple[str, str]] = [
-        ('css', 'a[href="/view_cart"]'),
-        ('xpath', '//a[contains(@href, "cart")]'),
-        ('text', 'Cart')
+    ('xpath', '//header//a[@href="/view_cart"]'),
+    ('css', 'header a[href="/view_cart"]'),
+    ('xpath', '//ul[@class="nav navbar-nav"]//a[@href="/view_cart"]')
     ]
     
     
