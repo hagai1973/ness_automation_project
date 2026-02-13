@@ -47,12 +47,12 @@ def setup_path():
 
 
 def clean_previous_results():
-    """Remove previous Allure results and report"""
-    print("\n🧹 Cleaning previous Allure results...")
-    if ALLURE_RESULTS.exists():
-        shutil.rmtree(ALLURE_RESULTS)
-    if ALLURE_REPORT.exists():
-        shutil.rmtree(ALLURE_REPORT)
+    """Remove previous Allure results, report, logs, and screenshots"""
+    print("\n🧹 Cleaning previous results...")
+    for folder in [ALLURE_RESULTS, ALLURE_REPORT, PROJECT_DIR / "logs", PROJECT_DIR / "screenshots"]:
+        if folder.exists():
+            shutil.rmtree(folder)
+            print(f"   🗑️  Removed {folder.name}/")
     print("   ✅ Previous results cleaned")
 
 

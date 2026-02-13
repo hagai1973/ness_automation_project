@@ -8,6 +8,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright, Browser, Page, BrowserContext
 import logging
 import os
+import allure
 from datetime import datetime
 
 
@@ -160,6 +161,15 @@ def screenshot_on_failure(request, page):
         try:
             page.screenshot(path=screenshot_path, full_page=True)
             logger.error(f"📸 Failure screenshot saved: {screenshot_path}")
+            
+            # Attach screenshot to Allure report
+            with open(screenshot_path, "rb") as f:
+                allure.attach(
+                    f.read(),
+                    name=f"FAILED_{test_name}",
+                    attachment_type=allure.attachment_type.PNG
+                )
+            logger.error(f"📎 Screenshot attached to Allure report")
         except Exception as e:
             logger.error(f"❌ Could not take failure screenshot: {str(e)}")
 
