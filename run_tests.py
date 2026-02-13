@@ -10,8 +10,17 @@ Usage:
     python run_tests.py --no-report         # Run tests without Allure report
     python run_tests.py --headed            # Run with browser visible (default)
     python run_tests.py --headless          # Run in headless mode
-    python run_tests.py --workers 3         # Run tests in parallel (3 workers)
-    python run_tests.py -w auto             # Auto-detect number of workers (1 per CPU)
+
+Parallel Execution (pytest-xdist):
+    python run_tests.py --workers 2         # Run with 2 parallel browsers
+    python run_tests.py --workers 3         # Run with 3 parallel browsers
+    python run_tests.py -w auto             # Auto-detect workers (1 per CPU core)
+    python run_tests.py -t login -w 2       # Login tests with 2 workers
+    python run_tests.py -t login -w 3 --no-report  # Parallel, no report
+
+    Each worker launches its own Chromium browser instance.
+    More workers = faster execution, but more memory usage.
+    Recommended: start with 2-3 workers.
 """
 
 import subprocess

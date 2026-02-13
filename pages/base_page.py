@@ -84,5 +84,8 @@ class BasePage:
     def navigate_to(self, url: str):
         """Navigate to URL"""
         self.logger.info(f"🌐 Navigating to: {url}")
-        self.page.goto(url)
-        self.page.wait_for_load_state('networkidle')
+        self.page.goto(url, wait_until='domcontentloaded')
+        try:
+            self.page.wait_for_load_state('networkidle', timeout=10000)
+        except Exception:
+            self.logger.warning("⚠️ networkidle timeout — page has background requests (ads/tracking), continuing...")
