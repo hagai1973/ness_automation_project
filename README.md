@@ -46,11 +46,7 @@ ness_automation_project/
 ├── data/                        # Test data
 │   └── search_data.json         # Search scenarios, credentials, budgets
 │
-├── utils/                       # Utility modules
-│   ├── config_reader.py         # Configuration file reader
-│   ├── locator_helper.py        # Locator utility helpers
-│   ├── logger.py                # Logging utilities
-│   └── screenshot_helper.py     # Screenshot capture utilities
+├── utils/                       # Utility package (reserved for future use)
 │
 ├── logs/                        # Test execution logs (git-ignored)
 ├── screenshots/                 # Failure screenshots (git-ignored)
@@ -330,7 +326,6 @@ Tests are decorated with Allure annotations for rich reporting:
 
 - **Test steps** with descriptions and timing
 - **Failure screenshots** automatically attached on test failure
-- **Log attachments** for debugging
 - **Tags and categories** for filtering (smoke, regression, e2e)
 - **Severity levels** (blocker, critical, normal)
 
