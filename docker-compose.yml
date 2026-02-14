@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  ness-automation:
+    build: .
+    container_name: ness-playwright-tests
+    volumes:
+      # Mount test results and reports to host for easy access
+      - ./allure-results:/app/allure-results
+      - ./allure-report:/app/allure-report
+      - ./logs:/app/logs
+      - ./screenshots:/app/screenshots
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTEST_TIMEOUT=300
+    # Override default command if needed
+    command: pytest tests/ -v --alluredir=allure-results
+    # For interactive debugging (optional)
+    # stdin_open: true
+    # tty: true
