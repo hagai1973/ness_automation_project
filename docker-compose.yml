@@ -1,4 +1,4 @@
-version: '3.8'
+# Removed obsolete 'version' line
 
 services:
   ness-automation:
@@ -13,6 +13,9 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - PYTEST_TIMEOUT=300
+    # ✅ NEW: Load environment variables from .env file (credentials)
+    env_file:
+      - .env
     # Override default command if needed
     command: pytest tests/ -v --alluredir=allure-results
     # For interactive debugging (optional)

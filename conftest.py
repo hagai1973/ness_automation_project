@@ -103,6 +103,10 @@ def browser_context():
     Setup Playwright browser context for each test
     Scope: function (new browser for each test)
     
+    Auto-detects Docker environment and configures browser accordingly:
+    - Docker: headless mode with explicit viewport
+    - Local: headed mode with maximized window
+    
     Returns:
         tuple: (page, context, browser, playwright)
     """
@@ -110,29 +114,54 @@ def browser_context():
     logger.info("🚀 Starting Browser Session")
     logger.info("="*80)
     
+    # Detect if running in Docker container
+    is_docker = os.path.exists('/.dockerenv') or os.getenv('DOCKER_CONTAINER') == 'true'
+    
     # Start Playwright
     playwright = sync_playwright().start()
     
-    # Launch browser MAXIMIZED
+    # Configure browser based on environment
+    if is_docker:
+        logger.info("🐳 Docker environment detected - running in HEADLESS mode")
+        headless = True
+        slow_mo = 100  # Faster in Docker
+    else:
+        logger.info("💻 Local environment detected - running in HEADED mode")
+        headless = False
+        slow_mo = 300  # Slower for local debugging
+    
+    # Launch browser with appropriate settings
     browser = playwright.chromium.launch(
-        headless=False,
-        slow_mo=300,  # Reduced for faster execution
+        headless=headless,
+        slow_mo=slow_mo,
         args=[
             '--start-maximized',
-            '--disable-blink-features=AutomationControlled'  # Hide automation flags
+            '--disable-blink-features=AutomationControlled',  # Hide automation flags
+            '--no-sandbox',  # Required for Docker
+            '--disable-dev-shm-usage'  # Prevents memory issues in Docker
         ]
     )
     
-    # Create context without viewport constraints
-    context = browser.new_context(
-        no_viewport=True,  # KEY: Allows window to be maximized
-        user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-    )
+    # Create context with environment-appropriate viewport settings
+    if headless:
+        # Headless mode: needs explicit viewport size
+        logger.info("   📐 Setting viewport: 1920x1080")
+        context = browser.new_context(
+            viewport={'width': 1920, 'height': 1080},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        )
+    else:
+        # Headed mode: allows window to be maximized
+        logger.info("   🖥️  Using no_viewport (maximized window)")
+        context = browser.new_context(
+            no_viewport=True,  # KEY: Allows window to be maximized
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        )
     
     # Create page
     page = context.new_page()
     
-    logger.info("✅ Browser launched successfully (MAXIMIZED)")
+    logger.info(f"✅ Browser launched successfully ({'HEADLESS' if headless else 'HEADED, MAXIMIZED'})")
     
     yield page, context, browser, playwright
     
@@ -147,6 +176,7 @@ def browser_context():
     playwright.stop()
     
     logger.info("✅ Browser closed successfully")
+
 
 @pytest.fixture(scope="function")
 def page(browser_context):

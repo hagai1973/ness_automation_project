@@ -139,11 +139,31 @@ docker-compose run --rm ness-automation allure generate allure-results --clean -
 # Or use PowerShell on your host machine
 allure generate allure-results --clean -o allure-report
 allure open allure-report
+
+# One-liner: Run tests + Generate report + Open in browser (PowerShell)
+docker-compose run --rm ness-automation pytest tests/ -m smoke -v; allure generate allure-results --clean -o allure-report; allure open allure-report
 ```
 
 ### Interactive Shell (Debugging)
 ```bash
 docker-compose run --rm ness-automation /bin/bash
+```
+
+---
+
+## Quick Command Reference
+
+### All-in-One Commands
+
+```bash
+# Run smoke tests + Generate report + Open in browser (PowerShell)
+docker-compose run --rm ness-automation pytest tests/ -m smoke -v; allure generate allure-results --clean -o allure-report; allure open allure-report
+
+# Run all tests + Generate report + Open in browser (PowerShell)
+docker-compose run --rm ness-automation pytest tests/ -v; allure generate allure-results --clean -o allure-report; allure open allure-report
+
+# Run with parallel execution + Generate report + Open (PowerShell)
+docker-compose run --rm ness-automation pytest tests/ -n 2 -v; allure generate allure-results --clean -o allure-report; allure open allure-report
 ```
 
 ---
