@@ -248,7 +248,7 @@ def pytest_runtest_makereport(item, call):
 def ensure_empty_cart(page, user_credentials):
     """
     Ensure the cart is empty before the test runs.
-    Logs in first, then navigates to cart, removes all items if any exist,
+    Logs in first, then navigates to cart, removes all items using clear_cart(),
     then returns to home page.
     Scope: function
     """
@@ -268,34 +268,14 @@ def ensure_empty_cart(page, user_credentials):
     login_page.login(email, password)
     logger.info("✅ Logged in for cart cleanup")
 
-    # Step 2: Navigate to cart and clean it
+    # Step 2: Navigate to cart and clean it using clear_cart()
     logger.info("🛒 Checking if cart is empty...")
     cart_page = CartPage(page)
     cart_page.navigate_to_cart()
-
-    # Check for items and remove them
-    delete_buttons = page.locator('a.cart_quantity_delete')
-    count = delete_buttons.count()
-
-    if count > 0:
-        logger.info(f"🧹 Cart has {count} item(s) — cleaning up...")
-        for i in range(count):
-            try:
-                page.locator('a.cart_quantity_delete').first.click()
-                # Wait for the item to be removed from DOM
-                page.wait_for_timeout(1000)
-                logger.info(f"   ❌ Removed item {i + 1}/{count}")
-            except Exception:
-                break
-
-        # Verify cart is now empty
-        remaining = page.locator('a.cart_quantity_delete').count()
-        if remaining == 0:
-            logger.info("✅ Cart is now empty")
-        else:
-            logger.warning(f"⚠️ {remaining} item(s) still remain in cart")
-    else:
-        logger.info("✅ Cart is already empty")
+    
+    # Use the clear_cart() method
+    cart_page.clear_cart()
+    logger.info("✅ Cart cleared using clear_cart() method")
 
     # Step 3: Navigate back to home page so test starts from a clean state
     home_page.navigate()
