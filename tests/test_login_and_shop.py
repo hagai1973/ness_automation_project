@@ -5,7 +5,6 @@ Tests complete flow with authentication
 
 import pytest
 import allure
-from playwright.sync_api import Page
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
