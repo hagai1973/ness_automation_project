@@ -4,6 +4,11 @@ FROM python:3.14-slim
 # Set working directory
 WORKDIR /app
 
+# Set environment variables (ADD THIS SECTION HERE)
+ENV DOCKER_CONTAINER=true
+ENV PYTHONUNBUFFERED=1
+ENV PYTEST_TIMEOUT=300
+
 # Install system dependencies required for Playwright
 RUN apt-get update && apt-get install -y \
     wget \
@@ -47,10 +52,6 @@ COPY . .
 
 # Create necessary directories
 RUN mkdir -p logs screenshots allure-results allure-report
-
-# Set environment variables
-ENV PYTHONUNBUFFERED=1
-ENV PYTEST_TIMEOUT=300
 
 # Default command - run all tests
 CMD ["pytest", "tests/", "-v", "--alluredir=allure-results"]
