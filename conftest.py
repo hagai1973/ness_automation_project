@@ -64,13 +64,28 @@ def test_data():
 
 
 @pytest.fixture(scope="session")
-def base_url(test_data):
+def base_url():
     """
-    Get base URL from test data
+    Get base URL based on ENVIRONMENT variable from .env file
     Scope: session
+    
+    Supported environments:
+        prod → https://automationexercise.com
+        qa   → https://automationexercise-qa.com
+        dev  → https://automationexercise-dev.com
     """
-    url = test_data.get('base_url', 'https://automationexercise.com')
-    logger.info(f"🌐 Base URL: {url}")
+    env = os.getenv('ENVIRONMENT', 'prod').lower()
+    
+    # Load environment URLs from JSON file
+    env_file = Path(__file__).parent / "data" / "environments.json"
+    with open(env_file, 'r', encoding='utf-8') as f:
+        urls = json.load(f)
+    
+    url = urls.get(env)
+    if not url:
+        raise ValueError(f"❌ Unknown ENVIRONMENT '{env}'. Must be one of: {', '.join(urls.keys())}")
+    
+    logger.info(f"🌐 Environment: {env.upper()} → Base URL: {url}")
     return url
 
 

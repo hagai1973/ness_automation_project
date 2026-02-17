@@ -1,13 +1,19 @@
 """
 Login functionality tests
+─────────────────────────
+Architecture:
+  test_login.py  ← assertions + test intent only  (this file)
+  auth_service   ← business logic / multi-step flows
+  pages/         ← element locators + low-level actions
+
+Each test should answer ONE question:
+  "Given this state, does the system behave correctly?"
 """
 
 import pytest
 import allure
-from pages.home_page import HomePage
-from pages.login_page import LoginPage
 import logging
-
+from services.auth_service import AuthService
 
 logger = logging.getLogger(__name__)
 
@@ -16,88 +22,89 @@ logger = logging.getLogger(__name__)
 @allure.story('User Login')
 class TestLogin:
     """Test class for login functionality"""
-    
+
+    # ──────────────────────────────────────────────────────────────────────
+    # FIXTURES
+    # ──────────────────────────────────────────────────────────────────────
+
+    @pytest.fixture(autouse=True)
+    def setup(self, page):
+        """Initialise AuthService once per test — injected via 'page' fixture."""
+        self.auth = AuthService(page)
+
+    # ──────────────────────────────────────────────────────────────────────
+    # TESTS
+    # ──────────────────────────────────────────────────────────────────────
+
     @allure.title("Successful login with valid credentials")
-    @allure.description("Test that user can login successfully with valid email and password")
+    @allure.description("Verify a user can log in with correct email and password")
     @allure.severity(allure.severity_level.BLOCKER)
     @pytest.mark.smoke
     @pytest.mark.regression
-    def test_successful_login(self, page, user_credentials):
-        """Test: Successful login with valid credentials"""
-        logger.info(f"\n{'#'*60}")
-        logger.info(f"🔐 TEST: Successful Login")
-        logger.info(f"{'#'*60}")
-        
-        # Get credentials from .env
-        email = user_credentials['email']
-        password = user_credentials['password']
-        
-        with allure.step("Navigate to login page"):
-            home_page = HomePage(page)
-            home_page.navigate()
-            home_page.go_to_login()
-        
-        with allure.step(f"Login with email: {email}"):
-            login_page = LoginPage(page)
-            login_success = login_page.login(email, password)
-        
-        with allure.step("Verify login successful"):
-            assert login_success, "Login failed with valid credentials"
-            assert login_page.is_logged_in(), "User is not logged in after successful login"
-        
-        logger.info(f"✅ TEST PASSED: User logged in successfully")
-        logger.info(f"{'#'*60}\n")
-    
-    
+    def test_successful_login(self, user_credentials):
+        """A valid user should be logged in after submitting correct credentials."""
+        logger.info("🔐 TEST: Successful Login")
+
+        # ── Act ────────────────────────────────────────────────────────────
+        login_page = self.auth.login(
+            email    = user_credentials['email'],
+            password = user_credentials['password']
+        )
+
+        # ── Assert ─────────────────────────────────────────────────────────
+        with allure.step("Verify user is logged in"):
+            assert login_page.is_logged_in(), \
+                "Expected user to be logged in after valid credentials — but they were not"
+
+        logger.info("✅ TEST PASSED: Successful login confirmed")
+
+
     @allure.title("Login fails with invalid credentials")
-    @allure.description("Test that login properly fails when using invalid credentials")
+    @allure.description("Verify login is rejected when wrong credentials are submitted")
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.smoke
-    def test_login_with_invalid_credentials(self, page):
-        """Test: Login fails with invalid credentials"""
-        logger.info(f"\n{'#'*60}")
-        logger.info(f"🔐 TEST: Login with Invalid Credentials")
-        logger.info(f"{'#'*60}")
-        
-        with allure.step("Navigate to login page"):
-            login_page = LoginPage(page)
-            login_page.navigate_to_login()
-        
-        with allure.step("Attempt login with invalid credentials"):
-            login_success = login_page.login("invalid@test.com", "wrongpassword")
-        
-        with allure.step("Verify login failed"):
-            assert not login_success, "Login should fail with invalid credentials"
-            assert not login_page.is_logged_in(), "User should not be logged in"
-        
-        logger.info(f"✅ TEST PASSED: Login correctly failed with invalid credentials")
-        logger.info(f"{'#'*60}\n")
-    
-    
+    def test_login_with_invalid_credentials(self):
+        """An invalid user should NOT be logged in after submitting wrong credentials."""
+        logger.info("🔐 TEST: Login with Invalid Credentials")
+
+        # ── Act ────────────────────────────────────────────────────────────
+        login_page = self.auth.login(
+            email    = "invalid@test.com",
+            password = "wrongpassword"
+        )
+
+        # ── Assert ─────────────────────────────────────────────────────────
+        with allure.step("Verify user is NOT logged in"):
+            assert not login_page.is_logged_in(), \
+                "Expected login to fail with invalid credentials — but user was logged in"
+
+        logger.info("✅ TEST PASSED: Login correctly rejected invalid credentials")
+
+
     @allure.title("Logout functionality")
-    @allure.description("Test that user can successfully logout after logging in")
+    @allure.description("Verify a logged-in user can successfully log out")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.regression
-    def test_logout(self, page, user_credentials):
-        """Test: Logout functionality"""
-        logger.info(f"\n{'#'*60}")
-        logger.info(f"🚪 TEST: Logout Functionality")
-        logger.info(f"{'#'*60}")
-        
-        email = user_credentials['email']
-        password = user_credentials['password']
-        
-        with allure.step("Login first"):
-            login_page = LoginPage(page)
-            login_page.navigate_to_login()
-            login_page.login(email, password)
-            assert login_page.is_logged_in(), "User should be logged in before logout"
-        
-        with allure.step("Logout"):
-            login_page.logout()
-        
-        with allure.step("Verify logged out"):
-            assert not login_page.is_logged_in(), "User should be logged out"
-        
-        logger.info(f"✅ TEST PASSED: Logout successful")
-        logger.info(f"{'#'*60}\n")
+    def test_logout(self, user_credentials):
+        """A logged-in user should be logged out after triggering logout."""
+        logger.info("🚪 TEST: Logout Functionality")
+
+        # ── Arrange ────────────────────────────────────────────────────────
+        login_page = self.auth.login(
+            email    = user_credentials['email'],
+            password = user_credentials['password']
+        )
+
+        with allure.step("Verify user is logged in before logout"):
+            assert login_page.is_logged_in(), \
+                "Precondition failed: user should be logged in before testing logout"
+
+        # ── Act ────────────────────────────────────────────────────────────
+        login_page = self.auth.logout()
+
+        # ── Assert ─────────────────────────────────────────────────────────
+        with allure.step("Verify user is logged out"):
+            assert not login_page.is_logged_in(), \
+                "Expected user to be logged out — but they are still logged in"
+
+        logger.info("✅ TEST PASSED: Logout confirmed")

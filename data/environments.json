@@ -1,0 +1,5 @@
+{
+  "prod": "https://automationexercise.com",
+  "qa": "https://automationexercise-qa.com",
+  "dev": "https://automationexercise-dev.com"
+}
