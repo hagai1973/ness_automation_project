@@ -6,4 +6,5 @@ allure-report/
 test-results/
 logs/
 screenshots/
+Practices/
 .env
