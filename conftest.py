@@ -292,7 +292,12 @@ def ensure_empty_cart(page, user_credentials):
     cart_page.clear_cart()
     logger.info("✅ Cart cleared using clear_cart() method")
 
-    # Step 3: Navigate back to home page so test starts from a clean state
+    # Step 3: Logout so test starts from a logged-out state
+    logger.info("🚪 Logging out after cart cleanup...")
+    login_page.logout()
+    logger.info("✅ Logged out after cart cleanup")
+
+    # Step 4: Navigate back to home page so test starts from a clean state
     home_page.navigate()
 
     yield
