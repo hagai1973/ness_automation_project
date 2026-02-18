@@ -41,6 +41,12 @@ class LoginPage(BasePage):
         ('xpath', '//li/a[@href="/logout"]')
     ]
     
+    LOGIN_LINK: List[Tuple[str, str]] = [
+        ('css', 'a[href="/login"]'),
+        ('xpath', '//a[contains(text(), "Login")]'),
+        ('xpath', '//li/a[@href="/login"]')
+    ]
+    
     
     def __init__(self, page):
         super().__init__(page)
@@ -127,6 +133,23 @@ class LoginPage(BasePage):
             return True
         except:
             self.logger.info("❌ User is not logged in (Logout link not found)")
+            return False
+    
+    
+    def is_logged_out(self) -> bool:
+        """
+        Check if user is currently logged out
+        by verifying the Login link is visible.
+        
+        Returns:
+            bool: True if logged out, False otherwise
+        """
+        try:
+            self.find_element_with_fallback(self.LOGIN_LINK, timeout=3000)
+            self.logger.info("✅ User is logged out (Login link visible)")
+            return True
+        except:
+            self.logger.info("❌ User is not logged out (Login link not found)")
             return False
     
     

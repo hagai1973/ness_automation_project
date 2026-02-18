@@ -75,7 +75,7 @@ class TestLogin:
 
         # ── Assert ─────────────────────────────────────────────────────────
         with allure.step("Verify user is NOT logged in"):
-            assert not login_page.is_logged_in(), \
+            assert login_page.is_logged_out(), \
                 "Expected login to fail with invalid credentials — but user was logged in"
 
         logger.info("✅ TEST PASSED: Login correctly rejected invalid credentials")
@@ -104,7 +104,7 @@ class TestLogin:
 
         # ── Assert ─────────────────────────────────────────────────────────
         with allure.step("Verify user is logged out"):
-            assert not login_page.is_logged_in(), \
+            assert login_page.is_logged_out(), \
                 "Expected user to be logged out — but they are still logged in"
 
         logger.info("✅ TEST PASSED: Logout confirmed")
