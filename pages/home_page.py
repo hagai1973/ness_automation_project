@@ -58,7 +58,13 @@ class HomePage(BasePage):
         """Click Cart link to view shopping cart"""
         self.logger.info("🛒 Clicking Cart link")
         self.click_with_fallback(self.CART_LINK)
-        self.page.wait_for_url("**/view_cart")
+        try:
+            self.page.wait_for_url("**/view_cart", wait_until="domcontentloaded", timeout=10000)
+        except Exception:
+            # Fallback: verify we actually navigated to the cart URL
+            if "view_cart" not in self.page.url:
+                raise
+            self.logger.warning("⚠️ wait_for_url timed out but URL is correct, continuing")
         self.logger.info("✅ On Cart page")
     
     

@@ -62,7 +62,11 @@ class ProductsPage(BasePage):
         self.logger.info(f"🔍 Searching for: '{query}'")
         self.type_with_fallback(self.SEARCH_INPUT, query)
         self.click_with_fallback(self.SEARCH_BUTTON)
-        self.page.wait_for_load_state('networkidle')
+        try:
+            self.page.wait_for_load_state('networkidle', timeout=10000)
+        except Exception:
+            self.logger.warning("⚠️ networkidle timeout after search, continuing with domcontentloaded")
+            self.page.wait_for_load_state('domcontentloaded', timeout=5000)
         self.logger.info(f"✅ Search completed for '{query}'")
     
     
@@ -128,8 +132,9 @@ class ProductsPage(BasePage):
                         
                         self.logger.info(f"   ✅ Adding: {product_name} - Rs. {price}")
                         
-                        # STEP 1: Hover over the product to reveal "Add to cart" button
-                        self.logger.info(f"   🖱️ Hovering over product...")
+                        # STEP 1: Scroll product into view and hover to reveal "Add to cart" button
+                        self.logger.info(f"   🖱️ Scrolling & hovering over product...")
+                        product.scroll_into_view_if_needed(timeout=5000)
                         product.hover()
                         
                         # Wait a bit for the overlay to appear
@@ -141,7 +146,11 @@ class ProductsPage(BasePage):
                         add_to_cart_btn.wait_for(state='visible', timeout=3000)
                         
                         self.logger.info(f"   🛒 Clicking 'Add to cart'...")
-                        add_to_cart_btn.click()
+                        try:
+                            add_to_cart_btn.click(timeout=3000)
+                        except Exception:
+                            self.logger.warning(f"   ⚠️ Normal click intercepted, using force click")
+                            add_to_cart_btn.click(force=True)
                         
                         # Wait for modal to appear
                         time.sleep(1)
