@@ -8,6 +8,10 @@ Architecture:
 
 Each test should answer ONE question:
   "Given this state, does the system behave correctly?"
+
+Xray Integration:
+  Each test is linked to a Jira Test issue via @pytest.mark.xray("SP2-XXX")
+  Run with:  pytest --jira-xray --cloud
 """
 
 import pytest
@@ -41,6 +45,7 @@ class TestLogin:
     @allure.severity(allure.severity_level.BLOCKER)
     @pytest.mark.smoke
     @pytest.mark.regression
+    @pytest.mark.xray("SP2-248")        # ← 🔗 Linked to Jira Test issue SP2-248
     def test_successful_login(self, user_credentials):
         """A valid user should be logged in after submitting correct credentials."""
         logger.info("🔐 TEST: Successful Login")
@@ -63,6 +68,7 @@ class TestLogin:
     @allure.description("Verify login is rejected when wrong credentials are submitted")
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.smoke
+    @pytest.mark.xray("SP2-249")        # ← 🔗 Replace SP2-249 with your actual Jira Test key
     def test_login_with_invalid_credentials(self):
         """An invalid user should NOT be logged in after submitting wrong credentials."""
         logger.info("🔐 TEST: Login with Invalid Credentials")
@@ -85,6 +91,7 @@ class TestLogin:
     @allure.description("Verify a logged-in user can successfully log out")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.regression
+    @pytest.mark.xray("SP2-250")        # ← 🔗 Replace SP2-250 with your actual Jira Test key
     def test_logout(self, user_credentials):
         """A logged-in user should be logged out after triggering logout."""
         logger.info("🚪 TEST: Logout Functionality")
